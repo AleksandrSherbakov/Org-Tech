@@ -1,4 +1,4 @@
-package project.orgtech.dao;
+package project.orgtech.dao.auth;
 
 import org.springframework.stereotype.Repository;
 import project.orgtech.models.Master;

@@ -1,12 +1,10 @@
-package project.orgtech.auth;
+package project.orgtech.utils;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import project.orgtech.dao.MasterDaoImpl;
 import project.orgtech.models.Master;
 
 @Component
-public class Manager {
+public class AuthManager {
 
     static Master curentMaster;
 

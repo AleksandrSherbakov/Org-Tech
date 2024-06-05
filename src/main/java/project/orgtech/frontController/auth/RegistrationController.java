@@ -2,18 +2,16 @@ package project.orgtech.frontController.auth;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import project.orgtech.dao.MasterDao;
+import project.orgtech.utils.AuthManager;
 import project.orgtech.models.Master;
+import project.orgtech.service.auth.MasterService;
+import project.orgtech.utils.FxmlView;
+import project.orgtech.utils.SceneManager;
 
 import java.io.IOException;
 
@@ -21,7 +19,10 @@ import java.io.IOException;
 public class RegistrationController {
 
     @Autowired
-    private MasterDao masterDao; // Injected by Spring
+    private MasterService masterService; // Injected by Spring
+
+    @Autowired
+    private SceneManager sceneManager;
 
     @FXML
     private TextField loginText;
@@ -53,7 +54,7 @@ public class RegistrationController {
         String middleName = middleNameText.getText();
 
         if (login.isEmpty() || password.isEmpty() || firstName.isEmpty() || lastName.isEmpty()) {
-            showAlert("Ошибка", "Все поля должны быть заполнены");
+            sceneManager.showAlert("Ошибка", "Все поля должны быть заполнены");
             return;
         }
 
@@ -64,34 +65,15 @@ public class RegistrationController {
         newMaster.setLastName(lastName);
         newMaster.setMiddleName(middleName);
 
-        masterDao.addMaster(newMaster);
-        showAlert("Успех", "Регистрация прошла успешно");
-
-        navigateToLogin();
+        masterService.addMaster(newMaster);
+        sceneManager.showAlert("Успех", "Регистрация прошла успешно");
+        AuthManager.setMaster(newMaster);
+        sceneManager.openScene(registerButton, FxmlView.MAIN);
     }
 
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
-        navigateToLogin();
-    }
-
-    private void navigateToLogin() throws IOException {
-        Stage currentStage = (Stage) backButton.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/orgtech/auth/login-view.fxml"));
-        Parent root = loader.load();
-        Stage newStage = new Stage();
-        newStage.setTitle("Вход");
-        newStage.setScene(new Scene(root));
-        newStage.show();
-        currentStage.close();
-    }
-
-    private void showAlert(String title, String content) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(content);
-        alert.showAndWait();
+        sceneManager.openScene(backButton, FxmlView.LOGIN);
     }
 
     @FXML

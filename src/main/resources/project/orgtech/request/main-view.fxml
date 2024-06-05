@@ -10,17 +10,17 @@
    <children>
       <AnchorPane layoutY="95.0" prefHeight="505.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
          <children>
-            <Button fx:id="MyApplicationButton" layoutX="22.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Мои заявки">
+            <Button fx:id="MyApplicationButton" layoutX="22.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Мои заявки" onAction="#handleMyApplicationButton">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="CategoryButton" layoutX="22.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Категории">
+            <Button fx:id="CategoryButton" layoutX="22.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Категории" onAction="#handleCategoryButton">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ReportsButton" layoutX="22.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Отчеты">
+            <Button fx:id="ReportsButton" layoutX="22.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Отчеты" onAction="#handleReportsButton">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>
