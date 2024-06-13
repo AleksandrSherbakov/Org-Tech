@@ -36,5 +36,8 @@ public class Master {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "gender_id")
+    private Gender gender;
 
 }

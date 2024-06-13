@@ -9,27 +9,32 @@
    <children>
       <AnchorPane layoutY="95.0" prefHeight="505.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
          <children>
-            <Button fx:id="MyApplicationButton" layoutX="22.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Мои заявки" onAction="#handleMyApplicationButton">
+            <Button fx:id="MyApplicationButton" layoutX="22.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleMyApplicationButton" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Мои заявки">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="CategoryButton" layoutX="22.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Категории" onAction="#handleCategoryButton">
+            <Button fx:id="CategoryButton" layoutX="22.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleCategoryButton" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Категории">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ReportsButton" layoutX="22.0" layoutY="166.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Отчеты" onAction="#handleReportsButton">
+            <Button fx:id="ReportsButton" layoutX="22.0" layoutY="166.0" mnemonicParsing="false" onAction="#handleReportsButton" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Отчеты">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ClientButton" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #F39c53;" text="Клиенты" onAction="#handleClientButton">
+            <Button fx:id="ClientButton" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleClientButton" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #F39c53;" text="Клиенты">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="PossibleRepairButton" layoutX="300.0" layoutY="69.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #F39c53;" text="Возможный ремонт" onAction="#handlePossibleRepairButtonButton">
+            <Button fx:id="PossibleRepairButton" layoutX="300.0" layoutY="69.0" mnemonicParsing="false" onAction="#handlePossibleRepairButtonButton" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #F39c53;" text="Возможный ремонт">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="TypeButton" layoutX="300.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleClientButton" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #F39c53;" text="Типы">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>

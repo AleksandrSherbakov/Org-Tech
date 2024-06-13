@@ -29,11 +29,14 @@ public class CategoryController {
     private Button ReportsButton;
 
     @FXML
-    private Button PossibleRepairButton;
+    private Button RepairButton;
+
+    @FXML
+    private Button TypeButton;
 
     @FXML
     private void handleMyApplicationButton(ActionEvent event) throws IOException {
-        //sceneManager.openScene(MyRequestButton, FxmlView.);
+        sceneManager.openScene(MyApplicationButton, FxmlView.MAIN);
     }
 
     @FXML
@@ -52,8 +55,13 @@ public class CategoryController {
     }
 
     @FXML
-    private void handlePossibleRepairButtonButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(PossibleRepairButton, FxmlView.POSSIBLE_REPAIR_PANEL);
+    private void handleRepairButtonButton(ActionEvent event) throws IOException {
+        sceneManager.openScene(RepairButton, FxmlView.POSSIBLE_REPAIR_PANEL);
+    }
+
+    @FXML
+    private void handleTypeButton(ActionEvent event) throws IOException {
+        sceneManager.openScene(TypeButton, FxmlView.Type_PANEL);
     }
 
 }

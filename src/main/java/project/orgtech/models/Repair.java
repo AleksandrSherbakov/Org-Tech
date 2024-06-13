@@ -9,13 +9,13 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "PossibleRepair")
+@Table(name = "Repair")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode
-public class PossibleRepair {
+public class Repair {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

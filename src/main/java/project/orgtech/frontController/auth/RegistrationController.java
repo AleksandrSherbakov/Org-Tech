@@ -3,12 +3,15 @@ package project.orgtech.frontController.auth;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import project.orgtech.service.gender.GenderService;
 import project.orgtech.utils.AuthManager;
 import project.orgtech.models.Master;
+import project.orgtech.models.Gender;
 import project.orgtech.service.auth.MasterService;
 import project.orgtech.utils.FxmlView;
 import project.orgtech.utils.SceneManager;
@@ -19,7 +22,10 @@ import java.io.IOException;
 public class RegistrationController {
 
     @Autowired
-    private MasterService masterService; // Injected by Spring
+    private MasterService masterService;
+
+    @Autowired
+    private GenderService genderService;
 
     @Autowired
     private SceneManager sceneManager;
@@ -40,6 +46,9 @@ public class RegistrationController {
     private TextField middleNameText;
 
     @FXML
+    private ComboBox<String> genderComboBox;
+
+    @FXML
     private Button registerButton;
 
     @FXML
@@ -52,8 +61,12 @@ public class RegistrationController {
         String firstName = firstNameText.getText();
         String lastName = lastNameText.getText();
         String middleName = middleNameText.getText();
-
-        if (login.isEmpty() || password.isEmpty() || firstName.isEmpty() || lastName.isEmpty()) {
+        String genderName = genderComboBox.getId();
+        long genderId = 0;
+        if (genderName != null && genderName.matches("\\d+")) {
+            genderId = Long.parseLong(genderName);
+        }
+        if (login.isEmpty() || password.isEmpty() || firstName.isEmpty() || lastName.isEmpty() || genderName == null) {
             sceneManager.showAlert("Ошибка", "Все поля должны быть заполнены");
             return;
         }
@@ -64,6 +77,10 @@ public class RegistrationController {
         newMaster.setFirstName(firstName);
         newMaster.setLastName(lastName);
         newMaster.setMiddleName(middleName);
+
+        Gender gender = genderService.getGenderById(genderId + 1);
+        //gender.setName(genderName);
+        newMaster.setGender(gender);
 
         masterService.addMaster(newMaster);
         sceneManager.showAlert("Успех", "Регистрация прошла успешно");
@@ -78,6 +95,6 @@ public class RegistrationController {
 
     @FXML
     void initialize() {
-        // Initialization logic if necessary
+        //genderComboBox.getItems().addAll("Мужской", "Женский");
     }
 }

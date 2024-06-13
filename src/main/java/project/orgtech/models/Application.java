@@ -11,19 +11,19 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
-@Table(name = "Request")
+@Table(name = "Application")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Request {
+public class Application {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "equipment_name", nullable = false)
+    @Column(name = "Type", nullable = false)
     private String equipmentName;
 
     @Column(name = "price", nullable = false)
@@ -45,10 +45,10 @@ public class Request {
     private Status status;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "equipment_type_id")
-    private EquipmentType equipmentType;
+    @JoinColumn(name = "type_id")
+    private Type type;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "possible_repair_id")
-    private PossibleRepair possibleRepair;
+    private Repair repair;
 }

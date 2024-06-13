@@ -14,7 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Master")
+@Table(name = "Gender")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

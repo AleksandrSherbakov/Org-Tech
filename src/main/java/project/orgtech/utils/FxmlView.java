@@ -7,10 +7,14 @@ public enum FxmlView {
     CLIENT_EDIT("/project/orgtech/client/edit-client-view.fxml", "Редактировать клиента"),
     CLIENT_INFO("/project/orgtech/client/info-client-view.fxml", "Информация клиента"),
     CLIENT_PANEL("/project/orgtech/client/panel-client-view.fxml", "Панель клиентов"),
-    POSSIBLE_REPAIR_ADD("/project/orgtech/repair/add-PossibleRepair-view.fxml", "Добавить возможный ремонт"),
-    POSSIBLE_REPAIR_EDIT("/project/orgtech/repair/edit-PossibleRepair-view.fxml", "Редактировать возможный ремонт"),
-    POSSIBLE_REPAIR_INFO("/project/orgtech/repair/info-PossibleRepair-view.fxml", "Информация о возможном ремонте"),
-    POSSIBLE_REPAIR_PANEL("/project/orgtech/repair/panel-PossibleRepair-view.fxml", "Панель возможного ремонта"),
+    POSSIBLE_REPAIR_ADD("/project/orgtech/repair/add-repair-view.fxml", "Добавить возможный ремонт"),
+    POSSIBLE_REPAIR_EDIT("/project/orgtech/repair/edit-repair-view.fxml", "Редактировать возможный ремонт"),
+    POSSIBLE_REPAIR_INFO("/project/orgtech/repair/info-repair-view.fxml", "Информация о возможном ремонте"),
+    POSSIBLE_REPAIR_PANEL("/project/orgtech/repair/panel-repair-view.fxml", "Панель возможного ремонта"),
+    Type_ADD("/project/orgtech/type/add-type-view.fxml", "Добавить тип"),
+    Type_EDIT("/project/orgtech/type/edit-type-view.fxml", "Редактировать тип"),
+    Type_INFO("/project/orgtech/type/info-type-view.fxml", "Информация о типе"),
+    Type_PANEL("/project/orgtech/type/panel-type-view.fxml", "Панель типа"),
     MAIN("/project/orgtech/request/main-view.fxml", "Главное окно"),
     CATEGORY("/project/orgtech/category-view.fxml", "Категории");
 
