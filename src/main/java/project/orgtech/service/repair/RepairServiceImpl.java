@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import project.orgtech.dao.repair.RepairDao;
 import project.orgtech.models.Repair;
+import project.orgtech.models.Type;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 public class RepairServiceImpl implements RepairService {
@@ -34,5 +36,10 @@ public class RepairServiceImpl implements RepairService {
     @Transactional
     public void deleteRepair(Long id) {
         repairDao.deleteRepair(id);
+    }
+
+    @Override
+    public List<Repair> getAllRepair() {
+        return repairDao.getAllRepair();
     }
 }

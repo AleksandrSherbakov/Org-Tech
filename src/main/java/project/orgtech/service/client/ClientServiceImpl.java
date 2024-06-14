@@ -6,6 +6,7 @@ import project.orgtech.dao.client.ClientDao;
 import project.orgtech.models.Client;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 public class ClientServiceImpl implements ClientService {
@@ -34,5 +35,10 @@ public class ClientServiceImpl implements ClientService {
     @Transactional
     public void deleteClient(Long id) {
         clientDao.deleteClient(id);
+    }
+
+    @Override
+    public List<Client> getAllClient() {
+        return clientDao.getAllClient();
     }
 }

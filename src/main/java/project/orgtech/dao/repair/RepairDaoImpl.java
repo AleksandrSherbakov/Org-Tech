@@ -2,10 +2,12 @@ package project.orgtech.dao.repair;
 
 import org.springframework.stereotype.Repository;
 import project.orgtech.models.Repair;
+import project.orgtech.models.Type;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 public class RepairDaoImpl implements RepairDao {
@@ -37,5 +39,11 @@ public class RepairDaoImpl implements RepairDao {
         if (repair != null) {
             entityManager.remove(repair);
         }
+    }
+
+    @Override
+    public List<Repair> getAllRepair() {
+        return entityManager.createQuery("SELECT s FROM Repair s", Repair.class)
+                .getResultList();
     }
 }

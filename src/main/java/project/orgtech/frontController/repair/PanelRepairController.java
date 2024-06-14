@@ -1,4 +1,4 @@
-package project.orgtech.frontController.type;
+package project.orgtech.frontController.repair;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,8 +10,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import project.orgtech.models.Type;
-import project.orgtech.service.type.TypeService;
+import project.orgtech.models.Repair;
+import project.orgtech.service.repair.RepairService;
 import project.orgtech.utils.FxmlView;
 import project.orgtech.utils.SceneManager;
 
@@ -19,16 +19,16 @@ import java.io.IOException;
 import java.util.List;
 
 @Controller
-public class PanelTypeController {
+public class PanelRepairController {
 
     @Autowired
     private SceneManager sceneManager;
 
     @Autowired
-    private TypeService typeService;
+    private RepairService repairService;
 
     @FXML
-    private ListView<Type> TypeListView;
+    private ListView<Repair> RepairListView;
 
     @FXML
     private Button CategoryButton;
@@ -42,7 +42,7 @@ public class PanelTypeController {
     @FXML
     private Button ReportsButton;
 
-    private ObservableList<Type> typeObservableList;
+    private ObservableList<Repair> repairObservableList;
 
     @FXML
     private void handleMyApplicationButton(ActionEvent event) throws IOException {
@@ -61,45 +61,45 @@ public class PanelTypeController {
 
     @FXML
     private void handleCreateButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(CreateButton, FxmlView.TYPE_ADD);
+        sceneManager.openScene(CreateButton, FxmlView.REPAIR_ADD);
     }
 
     public void initialize() {
         // Загрузите данные из базы данных
-        List<Type> types = loadDataFromDatabase();
+        List<Repair> repairs = loadDataFromDatabase();
 
         // Преобразуйте список в ObservableList
-        typeObservableList = FXCollections.observableArrayList(types);
+        repairObservableList = FXCollections.observableArrayList(repairs);
 
         // Установите ObservableList в ListView
-        TypeListView.setItems(typeObservableList);
+        RepairListView.setItems(repairObservableList);
 
         // Настройте отображение элементов списка
-        TypeListView.setCellFactory(param -> new ListCell<Type>() {
+        RepairListView.setCellFactory(param -> new ListCell<Repair>() {
             @Override
-            protected void updateItem(Type type, boolean empty) {
-                super.updateItem(type, empty);
-                if (empty || type == null || type.getName() == null) {
+            protected void updateItem(Repair repair, boolean empty) {
+                super.updateItem(repair, empty);
+                if (empty || repair == null || repair.getName() == null) {
                     setText(null);
                 } else {
-                    setText(type.getName());
+                    setText(repair.getName());
                 }
             }
         });
 
-        TypeListView.setOnMouseClicked(this::handleListClick);
+        RepairListView.setOnMouseClicked(this::handleListClick);
     }
 
-    private List<Type> loadDataFromDatabase() {
-        return typeService.getAllType();
+    private List<Repair> loadDataFromDatabase() {
+        return repairService.getAllRepair();
     }
 
     private void handleListClick(MouseEvent event) {
         if (event.getClickCount() == 2) {
-            Type selectedType = TypeListView.getSelectionModel().getSelectedItem();
-            if (selectedType != null) {
+            Repair selectedRepair = RepairListView.getSelectionModel().getSelectedItem();
+            if (selectedRepair != null) {
                 try {
-                    sceneManager.openScene(ReportsButton, FxmlView.TYPE_INFO, selectedType);
+                    sceneManager.openScene(ReportsButton, FxmlView.REPAIR_INFO, selectedRepair);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

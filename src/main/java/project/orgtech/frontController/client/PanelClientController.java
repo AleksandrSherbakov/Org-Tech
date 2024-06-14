@@ -1,4 +1,4 @@
-package project.orgtech.frontController.type;
+package project.orgtech.frontController.client;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,8 +10,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import project.orgtech.models.Type;
-import project.orgtech.service.type.TypeService;
+import project.orgtech.models.Client;
+import project.orgtech.service.client.ClientService;
 import project.orgtech.utils.FxmlView;
 import project.orgtech.utils.SceneManager;
 
@@ -19,16 +19,16 @@ import java.io.IOException;
 import java.util.List;
 
 @Controller
-public class PanelTypeController {
+public class PanelClientController {
 
     @Autowired
     private SceneManager sceneManager;
 
     @Autowired
-    private TypeService typeService;
+    private ClientService clientService;
 
     @FXML
-    private ListView<Type> TypeListView;
+    private ListView<Client> ClientListView;
 
     @FXML
     private Button CategoryButton;
@@ -42,7 +42,7 @@ public class PanelTypeController {
     @FXML
     private Button ReportsButton;
 
-    private ObservableList<Type> typeObservableList;
+    private ObservableList<Client> clientObservableList;
 
     @FXML
     private void handleMyApplicationButton(ActionEvent event) throws IOException {
@@ -61,45 +61,45 @@ public class PanelTypeController {
 
     @FXML
     private void handleCreateButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(CreateButton, FxmlView.TYPE_ADD);
+        sceneManager.openScene(CreateButton, FxmlView.CLIENT_ADD);
     }
 
     public void initialize() {
         // Загрузите данные из базы данных
-        List<Type> types = loadDataFromDatabase();
+        List<Client> clients = loadDataFromDatabase();
 
         // Преобразуйте список в ObservableList
-        typeObservableList = FXCollections.observableArrayList(types);
+        clientObservableList = FXCollections.observableArrayList(clients);
 
         // Установите ObservableList в ListView
-        TypeListView.setItems(typeObservableList);
+        ClientListView.setItems(clientObservableList);
 
         // Настройте отображение элементов списка
-        TypeListView.setCellFactory(param -> new ListCell<Type>() {
+        ClientListView.setCellFactory(param -> new ListCell<Client>() {
             @Override
-            protected void updateItem(Type type, boolean empty) {
-                super.updateItem(type, empty);
-                if (empty || type == null || type.getName() == null) {
+            protected void updateItem(Client client, boolean empty) {
+                super.updateItem(client, empty);
+                if (empty || client == null || client.getBio() == null) {
                     setText(null);
                 } else {
-                    setText(type.getName());
+                    setText(client.getBio());
                 }
             }
         });
 
-        TypeListView.setOnMouseClicked(this::handleListClick);
+        ClientListView.setOnMouseClicked(this::handleListClick);
     }
 
-    private List<Type> loadDataFromDatabase() {
-        return typeService.getAllType();
+    private List<Client> loadDataFromDatabase() {
+        return clientService.getAllClient();
     }
 
     private void handleListClick(MouseEvent event) {
         if (event.getClickCount() == 2) {
-            Type selectedType = TypeListView.getSelectionModel().getSelectedItem();
-            if (selectedType != null) {
+            Client selectedClient = ClientListView.getSelectionModel().getSelectedItem();
+            if (selectedClient != null) {
                 try {
-                    sceneManager.openScene(ReportsButton, FxmlView.TYPE_INFO, selectedType);
+                    sceneManager.openScene(ReportsButton, FxmlView.CLIENT_INFO, selectedClient);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

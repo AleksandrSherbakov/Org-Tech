@@ -23,4 +23,5 @@ public class StatusDaoImpl implements StatusDao {
         return entityManager.createQuery("SELECT s FROM Status s", Status.class)
                 .getResultList();
     }
+
 }

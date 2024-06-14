@@ -7,4 +7,5 @@ import java.util.List;
 public interface StatusDao {
     Status getStatusById(Long id);
     List<Status> getAllStatuses();
+
 }

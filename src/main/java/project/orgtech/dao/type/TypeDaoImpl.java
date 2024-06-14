@@ -1,11 +1,12 @@
 package project.orgtech.dao.type;
 
 import org.springframework.stereotype.Repository;
-import project.orgtech.models.Repair;
+import project.orgtech.models.Type;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 public class TypeDaoImpl implements TypeDao {
@@ -14,28 +15,34 @@ public class TypeDaoImpl implements TypeDao {
     private EntityManager entityManager;
 
     @Override
-    public Repair getRepairById(Long id) {
-        return entityManager.find(Repair.class, id);
+    public Type getTypeById(Long id) {
+        return entityManager.find(Type.class, id);
     }
 
     @Override
     @Transactional
-    public void addRepair(Repair repair) {
-        entityManager.persist(repair);
+    public void addType(Type type) {
+        entityManager.persist(type);
     }
 
     @Override
     @Transactional
-    public void updateRepair(Repair repair) {
-        entityManager.merge(repair);
+    public void updateType(Type type) {
+        entityManager.merge(type);
     }
 
     @Override
     @Transactional
-    public void deleteRepair(Long id) {
-        Repair repair = entityManager.find(Repair.class, id);
-        if (repair != null) {
-            entityManager.remove(repair);
+    public void deleteType(Long id) {
+        Type type = entityManager.find(Type.class, id);
+        if (type != null) {
+            entityManager.remove(type);
         }
+    }
+
+    @Override
+    public List<Type> getAllType() {
+        return entityManager.createQuery("SELECT s FROM Type s", Type.class)
+                .getResultList();
     }
 }

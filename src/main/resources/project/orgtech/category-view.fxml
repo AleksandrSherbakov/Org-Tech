@@ -29,12 +29,12 @@
                   <Font name="Comic Sans MS" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="PossibleRepairButton" layoutX="300.0" layoutY="69.0" mnemonicParsing="false" onAction="#handlePossibleRepairButtonButton" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #F39c53;" text="Возможный ремонт">
+            <Button fx:id="RepairButton" layoutX="300.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleRepairButton" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #F39c53;" text="Ремонт">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="TypeButton" layoutX="300.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleClientButton" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #F39c53;" text="Типы">
+            <Button fx:id="TypeButton" layoutX="300.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleTypeButton" prefHeight="51.0" prefWidth="389.0" style="-fx-background-color: #F39c53;" text="Типы">
                <font>
                   <Font name="Comic Sans MS" size="14.0" />
                </font>

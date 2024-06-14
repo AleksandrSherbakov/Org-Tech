@@ -1,10 +1,13 @@
 package project.orgtech.dao.type;
 
-import project.orgtech.models.Repair;
+import project.orgtech.models.Type;
+
+import java.util.List;
 
 public interface TypeDao {
-    Repair getRepairById(Long id);
-    void addRepair(Repair repair);
-    void updateRepair(Repair repair);
-    void deleteRepair(Long id);
+    Type getTypeById(Long id);
+    void addType(Type type);
+    void updateType(Type type);
+    void deleteType(Long id);
+    List<Type> getAllType();
 }

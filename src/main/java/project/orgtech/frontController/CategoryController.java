@@ -55,13 +55,13 @@ public class CategoryController {
     }
 
     @FXML
-    private void handleRepairButtonButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(RepairButton, FxmlView.POSSIBLE_REPAIR_PANEL);
+    private void handleRepairButton(ActionEvent event) throws IOException {
+        sceneManager.openScene(RepairButton, FxmlView.REPAIR_PANEL);
     }
 
     @FXML
     private void handleTypeButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(TypeButton, FxmlView.Type_PANEL);
+        sceneManager.openScene(TypeButton, FxmlView.TYPE_PANEL);
     }
 
 }
