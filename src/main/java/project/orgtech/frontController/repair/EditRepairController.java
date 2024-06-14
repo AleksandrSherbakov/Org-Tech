@@ -63,7 +63,7 @@ public class EditRepairController implements DataReceiver<Repair> {
 
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(BackButton, FxmlView.CLIENT_INFO, repair);
+        sceneManager.openScene(BackButton, FxmlView.REPAIR_INFO, repair);
     }
 
     private void loadRepairData() {

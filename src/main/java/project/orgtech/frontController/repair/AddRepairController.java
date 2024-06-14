@@ -51,7 +51,7 @@ public class AddRepairController {
 
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(BackButton, FxmlView.REPAIR_INFO);
+        sceneManager.openScene(BackButton, FxmlView.REPAIR_PANEL);
     }
 
 }

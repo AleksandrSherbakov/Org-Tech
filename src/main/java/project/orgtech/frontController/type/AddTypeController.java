@@ -51,7 +51,7 @@ public class AddTypeController  {
 
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(BackButton, FxmlView.TYPE_INFO);
+        sceneManager.openScene(BackButton, FxmlView.TYPE_PANEL);
     }
 
 }

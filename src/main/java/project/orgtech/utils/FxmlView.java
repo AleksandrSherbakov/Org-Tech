@@ -15,7 +15,8 @@ public enum FxmlView {
     TYPE_EDIT("/project/orgtech/type/edit-type-view.fxml", "Редактировать тип"),
     TYPE_INFO("/project/orgtech/type/info-type-view.fxml", "Информация о типе"),
     TYPE_PANEL("/project/orgtech/type/panel-type-view.fxml", "Панель типа"),
-    MAIN("/project/orgtech/request/main-view.fxml", "Главное окно"),
+    APPLICATION_ADD("/project/orgtech/application/add-application-view.fxml", "Панель типа"),
+    MAIN("/project/orgtech/application/main-view.fxml", "Главное окно"),
     CATEGORY("/project/orgtech/category-view.fxml", "Категории");
 
     private final String fxmlPath;

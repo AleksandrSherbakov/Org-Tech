@@ -23,8 +23,8 @@ public class Application {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "Type", nullable = false)
-    private String equipmentName;
+    @Column(name = "name", nullable = false)
+    private String name;
 
     @Column(name = "price", nullable = false)
     private BigDecimal price;

@@ -1,7 +1,5 @@
 package project.orgtech.service.type;
 
-import project.orgtech.models.Repair;
-import project.orgtech.models.Status;
 import project.orgtech.models.Type;
 
 import java.util.List;

@@ -17,6 +17,7 @@ import java.io.IOException;
 @Controller
 public class EditTypeController implements DataReceiver<Type> {
     private Type type;
+
     @Override
     public void setData(Type type) {
         this.type = type;
@@ -64,7 +65,7 @@ public class EditTypeController implements DataReceiver<Type> {
 
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(BackButton, FxmlView.CLIENT_INFO, type);
+        sceneManager.openScene(BackButton, FxmlView.TYPE_INFO, type);
     }
 
     private void loadTypeData() {

@@ -16,7 +16,7 @@ module project.orgtech {
     opens project.orgtech to javafx.fxml, spring.core, spring.beans, spring.context;
     opens project.orgtech.config to spring.core, spring.beans, spring.context;
 
-    /*opens project.orgtech.dao to spring.core, spring.beans, spring.context;*/
+    opens project.orgtech.dao.application to spring.core, spring.beans, spring.context;
     opens project.orgtech.dao.auth to spring.core, spring.beans, spring.context;
     opens project.orgtech.dao.client to spring.core, spring.beans, spring.context;
     opens project.orgtech.dao.repair to spring.core, spring.beans, spring.context;
@@ -30,6 +30,7 @@ module project.orgtech {
     opens project.orgtech.service.gender to spring.core, spring.beans, spring.context;
     opens project.orgtech.service.status to spring.core, spring.beans, spring.context;
     opens project.orgtech.service.type to spring.core, spring.beans, spring.context;
+    opens project.orgtech.service.application to spring.core, spring.beans, spring.context;
 
     opens project.orgtech.models to java.persistence, org.hibernate.orm.core;
     opens project.orgtech.auth to spring.core, spring.beans, spring.context;
@@ -40,6 +41,7 @@ module project.orgtech {
     opens project.orgtech.frontController.repair to javafx.fxml, spring.beans, spring.context, spring.core;
     opens project.orgtech.frontController.utils to javafx.fxml, spring.beans, spring.context, spring.core;
     opens project.orgtech.frontController.type to javafx.fxml, spring.beans, spring.context, spring.core;
+    opens project.orgtech.frontController.application to javafx.fxml, spring.beans, spring.context, spring.core;
 
     opens project.orgtech.utils to javafx.fxml, spring.beans, spring.context, spring.core, java.persistence, org.hibernate.orm.core;
 
@@ -53,6 +55,7 @@ module project.orgtech {
     exports project.orgtech.service.repair;
     exports project.orgtech.service.status;
     exports project.orgtech.service.type;
+    exports project.orgtech.service.application;
 
     /*exports project.orgtech.dao;*/
     exports project.orgtech.dao.auth;
@@ -61,6 +64,7 @@ module project.orgtech {
     exports project.orgtech.dao.gender;
     exports project.orgtech.dao.status;
     exports project.orgtech.dao.type;
+    exports project.orgtech.dao.application;
 
     exports project.orgtech.models;
     exports project.orgtech.utils;

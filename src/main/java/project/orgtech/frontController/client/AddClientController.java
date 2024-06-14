@@ -52,7 +52,7 @@ public class AddClientController {
 
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(BackButton, FxmlView.CLIENT_INFO);
+        sceneManager.openScene(BackButton, FxmlView.CLIENT_PANEL);
     }
 
 }
