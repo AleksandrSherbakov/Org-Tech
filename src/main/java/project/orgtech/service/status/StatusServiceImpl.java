@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import project.orgtech.dao.status.StatusDao;
 import project.orgtech.models.Status;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -15,12 +14,17 @@ public class StatusServiceImpl implements StatusService {
     private StatusDao statusDao;
 
     @Override
-    public Status getStatusById(Long id) {
-        return statusDao.getStatusById(id);
+    public Status getById(Long id) {
+        return statusDao.getById(id);
     }
 
     @Override
-    public List<Status> getAllStatuses() {
-        return statusDao.getAllStatuses();
+    public List<Status> getAll() {
+        return statusDao.getAll();
+    }
+
+    @Override
+    public void add(Status status) {
+        statusDao.add(status);
     }
 }

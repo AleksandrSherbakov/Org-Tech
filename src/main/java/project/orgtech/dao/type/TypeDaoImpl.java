@@ -15,25 +15,25 @@ public class TypeDaoImpl implements TypeDao {
     private EntityManager entityManager;
 
     @Override
-    public Type getTypeById(Long id) {
+    public Type getById(Long id) {
         return entityManager.find(Type.class, id);
     }
 
     @Override
     @Transactional
-    public void addType(Type type) {
+    public void add(Type type) {
         entityManager.persist(type);
     }
 
     @Override
     @Transactional
-    public void updateType(Type type) {
+    public void update(Type type) {
         entityManager.merge(type);
     }
 
     @Override
     @Transactional
-    public void deleteType(Long id) {
+    public void delete(Long id) {
         Type type = entityManager.find(Type.class, id);
         if (type != null) {
             entityManager.remove(type);
@@ -41,7 +41,7 @@ public class TypeDaoImpl implements TypeDao {
     }
 
     @Override
-    public List<Type> getAllType() {
+    public List<Type> getAll() {
         return entityManager.createQuery("SELECT s FROM Type s", Type.class)
                 .getResultList();
     }

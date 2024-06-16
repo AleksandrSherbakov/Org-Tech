@@ -53,7 +53,7 @@ public class EditRepairController implements DataReceiver<Repair> {
         repair.setDescription(newDescription);
 
         // Вызываем сервис для сохранения изменений
-        repairService.updateRepair(repair);
+        repairService.update(repair);
 
         // Показываем сообщение об успешном сохранении
         sceneManager.showAlert("Успешно", "Тип сохранен");

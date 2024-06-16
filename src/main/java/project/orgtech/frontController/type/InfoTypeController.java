@@ -61,7 +61,7 @@ public class InfoTypeController implements DataReceiver<Type> {
     @FXML
     private void handleDeleteButton(ActionEvent event) throws IOException {
         if (type != null) {
-            typeService.deleteType(type.getId());
+            typeService.delete(type.getId());
         }
         sceneManager.openScene(DeleteButton, FxmlView.TYPE_PANEL);
     }

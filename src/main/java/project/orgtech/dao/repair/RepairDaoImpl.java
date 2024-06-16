@@ -16,7 +16,7 @@ public class RepairDaoImpl implements RepairDao {
     private EntityManager entityManager;
 
     @Override
-    public Repair getRepairById(Long id) {
+    public Repair getById(Long id) {
         return entityManager.find(Repair.class, id);
     }
 
@@ -28,13 +28,13 @@ public class RepairDaoImpl implements RepairDao {
 
     @Override
     @Transactional
-    public void updateRepair(Repair repair) {
+    public void update(Repair repair) {
         entityManager.merge(repair);
     }
 
     @Override
     @Transactional
-    public void deleteRepair(Long id) {
+    public void delete(Long id) {
         Repair repair = entityManager.find(Repair.class, id);
         if (repair != null) {
             entityManager.remove(repair);
@@ -42,7 +42,7 @@ public class RepairDaoImpl implements RepairDao {
     }
 
     @Override
-    public List<Repair> getAllRepair() {
+    public List<Repair> getAll() {
         return entityManager.createQuery("SELECT s FROM Repair s", Repair.class)
                 .getResultList();
     }

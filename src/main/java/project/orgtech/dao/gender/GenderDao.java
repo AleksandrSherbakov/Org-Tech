@@ -5,6 +5,7 @@ import project.orgtech.models.Gender;
 import java.util.List;
 
 public interface GenderDao {
-    Gender getGenderById(Long id);
-    List<Gender> getAllGenders();
+    Gender getById(Long id);
+    List<Gender> getAll();
+    void add(Gender gender);
 }

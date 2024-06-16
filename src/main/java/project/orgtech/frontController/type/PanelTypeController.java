@@ -91,7 +91,7 @@ public class PanelTypeController {
     }
 
     private List<Type> loadDataFromDatabase() {
-        return typeService.getAllType();
+        return typeService.getAll();
     }
 
     private void handleListClick(MouseEvent event) {

@@ -40,7 +40,7 @@ public class AddTypeController  {
         type.setDescription(descriptionField.getText());
 
         // Вызываем сервис для сохранения изменений
-        typeService.addType(type);
+        typeService.add(type);
 
         // Показываем сообщение об успешном сохранении
         sceneManager.showAlert("Успешно", "Тип создан");

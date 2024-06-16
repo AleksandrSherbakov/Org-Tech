@@ -60,7 +60,7 @@ public class InfoRepairController implements DataReceiver<Repair> {
     @FXML
     private void handleDeleteButton(ActionEvent event) throws IOException {
         if (repair != null) {
-            repairService.deleteRepair(repair.getId());
+            repairService.delete(repair.getId());
         }
         sceneManager.openScene(DeleteButton, FxmlView.REPAIR_PANEL);
     }

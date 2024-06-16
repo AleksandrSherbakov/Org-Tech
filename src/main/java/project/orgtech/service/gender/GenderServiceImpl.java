@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import project.orgtech.dao.gender.GenderDao;
 import project.orgtech.models.Gender;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -15,12 +14,17 @@ public class GenderServiceImpl implements GenderService {
     private GenderDao genderDao;
 
     @Override
-    public Gender getGenderById(Long id) {
-        return genderDao.getGenderById(id);
+    public Gender getById(Long id) {
+        return genderDao.getById(id);
     }
 
     @Override
-    public List<Gender> getAllGenders() {
-        return genderDao.getAllGenders();
+    public List<Gender> getAll() {
+        return genderDao.getAll();
+    }
+
+    @Override
+    public void add(Gender gender) {
+        genderDao.add(gender);
     }
 }

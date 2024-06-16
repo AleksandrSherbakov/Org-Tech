@@ -91,7 +91,7 @@ public class MainController {
     }
 
     private List<Application> loadDataFromDatabase() {
-        return applicationService.getAllApplication();
+        return applicationService.getAll();
     }
 
     private void handleListClick(MouseEvent event) {

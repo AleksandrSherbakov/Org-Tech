@@ -12,6 +12,7 @@ module project.orgtech {
     requires spring.tx;
     requires java.transaction;
     requires org.hibernate.orm.core;
+    requires java.annotation;
 
     opens project.orgtech to javafx.fxml, spring.core, spring.beans, spring.context;
     opens project.orgtech.config to spring.core, spring.beans, spring.context;

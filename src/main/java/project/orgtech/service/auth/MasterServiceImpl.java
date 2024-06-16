@@ -13,18 +13,18 @@ public class MasterServiceImpl implements MasterService{
     @Autowired
     private MasterDao masterDao;
     @Override
-    public Master getMasterById(Long id) {
-        return masterDao.getMasterById(id);
+    public Master getById(Long id) {
+        return masterDao.getById(id);
     }
 
     @Override
     @Transactional
-    public void addMaster(Master master) {
-        masterDao.addMaster(master);
+    public void add(Master master) {
+        masterDao.add(master);
     }
 
     @Override
-    public Master findMasterByLogin(String login) {
-        return masterDao.findMasterByLogin(login);
+    public Master findByLogin(String login) {
+        return masterDao.findByLogin(login);
     }
 }

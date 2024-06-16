@@ -54,7 +54,7 @@ public class EditClientController implements DataReceiver<Client> {
         client.setPhone(newDescription);
 
         // Вызываем сервис для сохранения изменений
-        clientService.updateClient(client);
+        clientService.update(client);
 
         // Показываем сообщение об успешном сохранении
         sceneManager.showAlert("Успешно", "Тип сохранен");

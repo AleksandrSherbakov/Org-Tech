@@ -16,22 +16,22 @@ public class ApplicationDaoImpl implements ApplicationDao{
     private EntityManager entityManager;
 
     @Override
-    public Application getApplicationById(Long id) {
+    public Application getById(Long id) {
         return entityManager.find(Application.class, id);    }
 
     @Override
     @Transactional
-    public void addApplication(Application application) {
+    public void add(Application application) {
         entityManager.persist(application);
     }
 
     @Override
-    public void updateApplication(Application application) {
+    public void update(Application application) {
         entityManager.merge(application);
     }
 
     @Override
-    public void deleteApplication(Long id) {
+    public void delete(Long id) {
         Application application = entityManager.find(Application.class, id);
         if (application != null) {
             entityManager.remove(application);
@@ -39,7 +39,7 @@ public class ApplicationDaoImpl implements ApplicationDao{
     }
 
     @Override
-    public List<Application> getAllApplication() {
+    public List<Application> getAll() {
         return entityManager.createQuery("SELECT s FROM Application s", Application.class)
                 .getResultList();
     }

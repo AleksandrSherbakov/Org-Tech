@@ -40,7 +40,7 @@ public class AddRepairController {
         repair.setDescription(descriptionField.getText());
 
         // Вызываем сервис для сохранения изменений
-        repairService.addRepair(repair);
+        repairService.add(repair);
 
         // Показываем сообщение об успешном сохранении
         sceneManager.showAlert("Успешно", "Тип создан");

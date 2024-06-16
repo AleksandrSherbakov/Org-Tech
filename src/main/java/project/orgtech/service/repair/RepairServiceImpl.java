@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import project.orgtech.dao.repair.RepairDao;
 import project.orgtech.models.Repair;
-import project.orgtech.models.Type;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -16,30 +15,30 @@ public class RepairServiceImpl implements RepairService {
     private RepairDao repairDao;
 
     @Override
-    public Repair getRepairById(Long id) {
-        return repairDao.getRepairById(id);
+    public Repair getById(Long id) {
+        return repairDao.getById(id);
     }
 
     @Override
     @Transactional
-    public void addRepair(Repair repair) {
+    public void add(Repair repair) {
         repairDao.addRepair(repair);
     }
 
     @Override
     @Transactional
-    public void updateRepair(Repair repair) {
-        repairDao.updateRepair(repair);
+    public void update(Repair repair) {
+        repairDao.update(repair);
     }
 
     @Override
     @Transactional
-    public void deleteRepair(Long id) {
-        repairDao.deleteRepair(id);
+    public void delete(Long id) {
+        repairDao.delete(id);
     }
 
     @Override
-    public List<Repair> getAllRepair() {
-        return repairDao.getAllRepair();
+    public List<Repair> getAll() {
+        return repairDao.getAll();
     }
 }

@@ -15,30 +15,30 @@ public class ClientServiceImpl implements ClientService {
     private ClientDao clientDao;
 
     @Override
-    public Client getClientById(Long id) {
+    public Client getById(Long id) {
         return clientDao.getClientById(id);
     }
 
     @Override
     @Transactional
-    public void addClient(Client client) {
+    public void add(Client client) {
         clientDao.addClient(client);
     }
 
     @Override
     @Transactional
-    public void updateClient(Client client) {
+    public void update(Client client) {
         clientDao.updateClient(client);
     }
 
     @Override
     @Transactional
-    public void deleteClient(Long id) {
+    public void delete(Long id) {
         clientDao.deleteClient(id);
     }
 
     @Override
-    public List<Client> getAllClient() {
+    public List<Client> getAll() {
         return clientDao.getAllClient();
     }
 }

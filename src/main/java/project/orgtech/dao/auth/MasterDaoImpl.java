@@ -15,18 +15,37 @@ public class MasterDaoImpl implements MasterDao {
     private EntityManager entityManager;
 
     @Override
-    public Master getMasterById(Long id) {
+    public Master getById(Long id) {
         return entityManager.find(Master.class, id);
     }
 
     @Override
     @Transactional
-    public void addMaster(Master master) {
+    public void add(Master master) {
         entityManager.persist(master);
     }
 
     @Override
-    public Master findMasterByLogin(String login) {
+    public void update(Master application) {
+        entityManager.merge(application);
+    }
+
+    @Override
+    public void delete(Long id) {
+        Master application = entityManager.find(Master.class, id);
+        if (application != null) {
+            entityManager.remove(application);
+        }
+    }
+
+    @Override
+    public List<Master> getAll() {
+        return entityManager.createQuery("SELECT s FROM Master s", Master.class)
+                .getResultList();
+    }
+
+    @Override
+    public Master findByLogin(String login) {
         String jpql = "SELECT u FROM Master u WHERE u.login = :login";
         List<Master> masters = entityManager.createQuery(jpql, Master.class)
                 .setParameter("login", login)

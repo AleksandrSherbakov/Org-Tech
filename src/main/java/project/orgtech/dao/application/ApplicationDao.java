@@ -5,9 +5,9 @@ import project.orgtech.models.Application;
 import java.util.List;
 
 public interface ApplicationDao {
-    Application getApplicationById(Long id);
-    void addApplication(Application application);
-    void updateApplication(Application application);
-    void deleteApplication(Long id);
-    List<Application> getAllApplication();
+    Application getById(Long id);
+    void add(Application application);
+    void update(Application application);
+    void delete(Long id);
+    List<Application> getAll();
 }

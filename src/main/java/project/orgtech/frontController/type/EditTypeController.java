@@ -55,7 +55,7 @@ public class EditTypeController implements DataReceiver<Type> {
         type.setDescription(newDescription);
 
         // Вызываем сервис для сохранения изменений
-        typeService.updateType(type);
+        typeService.update(type);
 
         // Показываем сообщение об успешном сохранении
         sceneManager.showAlert("Успешно", "Тип сохранен");

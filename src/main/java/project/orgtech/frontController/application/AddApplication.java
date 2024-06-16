@@ -53,16 +53,16 @@ public class AddApplication {
         Application application = new Application();
         application.setName(nameField.getText());
         application.setPrice(BigDecimal.valueOf(Long.parseLong(descriptionField.getText())));
-        application.setClient(clientService.getClientById(1L));
-        application.setRepair(repairService.getRepairById(1L));
-        application.setType(typeService.getTypeById(1L));
-        application.setStatus(statusService.getStatusById(1L));
+        application.setClient(clientService.getById(1L));
+        application.setRepair(repairService.getById(1L));
+        application.setType(typeService.getById(1L));
+        application.setStatus(statusService.getById(1L));
         Date date = new Date();
         application.setDate(date);
         application.setMaster(AuthManager.getMaser());
 
         // Вызываем сервис для сохранения изменений
-        applicationService.addApplication(application);
+        applicationService.add(application);
 
         // Показываем сообщение об успешном сохранении
         sceneManager.showAlert("Успешно", "Тип создан");

@@ -91,7 +91,7 @@ public class PanelRepairController {
     }
 
     private List<Repair> loadDataFromDatabase() {
-        return repairService.getAllRepair();
+        return repairService.getAll();
     }
 
     private void handleListClick(MouseEvent event) {

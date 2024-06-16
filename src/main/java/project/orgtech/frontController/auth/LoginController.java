@@ -38,7 +38,7 @@ public class LoginController {
 
     @FXML
     private void handleLoginButton(ActionEvent event) throws IOException {
-        Master master = masterService.findMasterByLogin(loginText.getText());
+        Master master = masterService.findByLogin(loginText.getText());
         if (master != null && master.getPassword().equals(passwordText.getText())) {
             AuthManager.setMaster(master);
             sceneManager.openScene(loginButton, FxmlView.MAIN);

@@ -91,7 +91,7 @@ public class PanelClientController {
     }
 
     private List<Client> loadDataFromDatabase() {
-        return clientService.getAllClient();
+        return clientService.getAll();
     }
 
     private void handleListClick(MouseEvent event) {

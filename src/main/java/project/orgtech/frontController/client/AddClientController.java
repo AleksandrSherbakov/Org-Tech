@@ -41,7 +41,7 @@ public class AddClientController {
         client.setPhone(descriptionField.getText());
 
         // Вызываем сервис для сохранения изменений
-        clientService.addClient(client);
+        clientService.add(client);
 
         // Показываем сообщение об успешном сохранении
         sceneManager.showAlert("Успешно", "Тип создан");

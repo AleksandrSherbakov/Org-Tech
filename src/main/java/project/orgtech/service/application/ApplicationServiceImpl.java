@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.orgtech.dao.application.ApplicationDao;
-import project.orgtech.dao.type.TypeDao;
 import project.orgtech.models.Application;
 
 import java.util.List;
@@ -15,28 +14,28 @@ public class ApplicationServiceImpl implements ApplicationService{
     @Autowired
     private ApplicationDao applicationDao;
     @Override
-    public Application getApplicationById(Long id) {
-        return applicationDao.getApplicationById(id);
+    public Application getById(Long id) {
+        return applicationDao.getById(id);
     }
 
     @Override
     @Transactional
-    public void addApplication(Application application) {
-        applicationDao.addApplication(application);
+    public void add(Application application) {
+        applicationDao.add(application);
     }
 
     @Override
-    public void updateApplication(Application application) {
-    applicationDao.updateApplication(application);
+    public void update(Application application) {
+    applicationDao.update(application);
     }
 
     @Override
-    public void deleteApplication(Long id) {
-        applicationDao.deleteApplication(id);
+    public void delete(Long id) {
+        applicationDao.delete(id);
     }
 
     @Override
-    public List<Application> getAllApplication() {
-        return applicationDao.getAllApplication();
+    public List<Application> getAll() {
+        return applicationDao.getAll();
     }
 }

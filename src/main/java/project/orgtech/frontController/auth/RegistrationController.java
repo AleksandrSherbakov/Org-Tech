@@ -78,11 +78,11 @@ public class RegistrationController {
         newMaster.setLastName(lastName);
         newMaster.setMiddleName(middleName);
 
-        Gender gender = genderService.getGenderById(genderId + 1);
+        Gender gender = genderService.getById(genderId + 1);
         //gender.setName(genderName);
         newMaster.setGender(gender);
 
-        masterService.addMaster(newMaster);
+        masterService.add(newMaster);
         sceneManager.showAlert("Успех", "Регистрация прошла успешно");
         AuthManager.setMaster(newMaster);
         sceneManager.openScene(registerButton, FxmlView.MAIN);

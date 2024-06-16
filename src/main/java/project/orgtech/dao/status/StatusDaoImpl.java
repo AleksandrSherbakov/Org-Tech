@@ -14,14 +14,19 @@ public class StatusDaoImpl implements StatusDao {
     private EntityManager entityManager;
 
     @Override
-    public Status getStatusById(Long id) {
+    public Status getById(Long id) {
         return entityManager.find(Status.class, id);
     }
 
     @Override
-    public List<Status> getAllStatuses() {
+    public List<Status> getAll() {
         return entityManager.createQuery("SELECT s FROM Status s", Status.class)
                 .getResultList();
+    }
+
+    @Override
+    public void add(Status status) {
+
     }
 
 }

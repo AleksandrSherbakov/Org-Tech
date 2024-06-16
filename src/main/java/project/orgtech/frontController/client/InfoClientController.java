@@ -62,7 +62,7 @@ public class InfoClientController implements DataReceiver<Client> {
     @FXML
     private void handleDeleteButton(ActionEvent event) throws IOException {
         if (client != null) {
-            clientService.deleteClient(client.getId());
+            clientService.delete(client.getId());
         }
         sceneManager.openScene(DeleteButton, FxmlView.CLIENT_PANEL);
     }

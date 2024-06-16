@@ -14,13 +14,18 @@ public class GenderDaoImpl implements GenderDao {
     private EntityManager entityManager;
 
     @Override
-    public Gender getGenderById(Long id) {
+    public Gender getById(Long id) {
         return entityManager.find(Gender.class, id);
     }
 
     @Override
-    public List<Gender> getAllGenders() {
+    public List<Gender> getAll() {
         return entityManager.createQuery("SELECT g FROM Gender g", Gender.class)
                 .getResultList();
+    }
+
+    @Override
+    public void add(Gender gender) {
+
     }
 }
