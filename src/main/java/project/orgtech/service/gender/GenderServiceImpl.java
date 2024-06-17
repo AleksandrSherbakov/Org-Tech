@@ -2,6 +2,7 @@ package project.orgtech.service.gender;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import project.orgtech.dao.gender.GenderDao;
 import project.orgtech.models.Gender;
 
@@ -24,6 +25,7 @@ public class GenderServiceImpl implements GenderService {
     }
 
     @Override
+    @Transactional
     public void add(Gender gender) {
         genderDao.add(gender);
     }

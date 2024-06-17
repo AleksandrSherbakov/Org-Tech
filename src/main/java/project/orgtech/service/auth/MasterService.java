@@ -7,6 +7,4 @@ public interface MasterService {
     void add(Master master);
     Master findByLogin(String login);
 
-
-
 }

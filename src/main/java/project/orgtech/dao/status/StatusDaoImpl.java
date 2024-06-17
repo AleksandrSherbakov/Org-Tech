@@ -1,6 +1,7 @@
 package project.orgtech.dao.status;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import project.orgtech.models.Status;
 
 import javax.persistence.EntityManager;
@@ -25,8 +26,9 @@ public class StatusDaoImpl implements StatusDao {
     }
 
     @Override
+    @Transactional
     public void add(Status status) {
-
+        entityManager.persist(status);
     }
 
 }

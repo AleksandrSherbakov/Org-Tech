@@ -1,6 +1,7 @@
 package project.orgtech.dao.gender;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import project.orgtech.models.Gender;
 
 import javax.persistence.EntityManager;
@@ -25,7 +26,8 @@ public class GenderDaoImpl implements GenderDao {
     }
 
     @Override
+    @Transactional
     public void add(Gender gender) {
-
+        entityManager.persist(gender);
     }
 }

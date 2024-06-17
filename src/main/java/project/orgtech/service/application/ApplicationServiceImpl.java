@@ -25,11 +25,13 @@ public class ApplicationServiceImpl implements ApplicationService{
     }
 
     @Override
+    @Transactional
     public void update(Application application) {
     applicationDao.update(application);
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
         applicationDao.delete(id);
     }

@@ -10,7 +10,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Сlient")
+@Table(name = "Client")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -27,4 +27,9 @@ public class Client {
 
     @Column(name = "phone", nullable = false)
     private String phone;
+
+    @Override
+    public String toString() {
+        return this.bio;
+    }
 }

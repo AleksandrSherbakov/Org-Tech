@@ -52,6 +52,24 @@ public class SceneManager {
         }
     }
 
+    public void openScene(FxmlView fxmlView) throws IOException {
+        String fxmlPath = fxmlView.getFxmlPath();
+        String title = fxmlView.getTitle();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+        loader.setControllerFactory(StartApplication.getContext()::getBean);
+        Parent root = loader.load();
+        Stage newStage = new Stage();
+        newStage.setTitle(title);
+        newStage.setScene(new Scene(root));
+        newStage.show();
+    }
+    public void closeScene(Button button) throws IOException {
+        Stage currentStage = (Stage) button.getScene().getWindow();
+        if (currentStage != null) {
+            currentStage.close();
+        }
+    }
+
     public void showAlert(String title, String content) throws IOException {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);

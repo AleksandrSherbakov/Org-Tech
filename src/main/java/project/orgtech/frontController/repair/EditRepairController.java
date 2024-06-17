@@ -42,7 +42,7 @@ public class EditRepairController implements DataReceiver<Repair> {
     @FXML
     private void handleSave(ActionEvent event) throws IOException {
         if (repair == null) {
-            sceneManager.showAlert("Ошибка", "Тип не найден");
+            sceneManager.showAlert("Ошибка", "Ремонт не найден");
             return;
         }
 
@@ -56,7 +56,7 @@ public class EditRepairController implements DataReceiver<Repair> {
         repairService.update(repair);
 
         // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Тип сохранен");
+        sceneManager.showAlert("Успешно", "Ремонт сохранен");
 
         sceneManager.openScene(SaveButton, FxmlView.REPAIR_PANEL);
     }

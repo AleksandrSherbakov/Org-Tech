@@ -13,38 +13,40 @@ module project.orgtech {
     requires java.transaction;
     requires org.hibernate.orm.core;
     requires java.annotation;
+    requires spring.aop;
 
-    opens project.orgtech to javafx.fxml, spring.core, spring.beans, spring.context;
-    opens project.orgtech.config to spring.core, spring.beans, spring.context;
+    opens project.orgtech to javafx.fxml, spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.config to spring.core, spring.beans, spring.context, spring.aop;
 
-    opens project.orgtech.dao.application to spring.core, spring.beans, spring.context;
-    opens project.orgtech.dao.auth to spring.core, spring.beans, spring.context;
-    opens project.orgtech.dao.client to spring.core, spring.beans, spring.context;
-    opens project.orgtech.dao.repair to spring.core, spring.beans, spring.context;
-    opens project.orgtech.dao.gender to spring.core, spring.beans, spring.context;
-    opens project.orgtech.dao.status to spring.core, spring.beans, spring.context;
-    opens project.orgtech.dao.type to spring.core, spring.beans, spring.context;
+    opens project.orgtech.dao.application to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.dao.auth to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.dao.client to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.dao.repair to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.dao.gender to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.dao.status to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.dao.type to spring.core, spring.beans, spring.context, spring.aop;
 
-    opens project.orgtech.service.auth to spring.core, spring.beans, spring.context;
-    opens project.orgtech.service.client to spring.core, spring.beans, spring.context;
-    opens project.orgtech.service.repair to spring.core, spring.beans, spring.context;
-    opens project.orgtech.service.gender to spring.core, spring.beans, spring.context;
-    opens project.orgtech.service.status to spring.core, spring.beans, spring.context;
-    opens project.orgtech.service.type to spring.core, spring.beans, spring.context;
-    opens project.orgtech.service.application to spring.core, spring.beans, spring.context;
+    opens project.orgtech.service.auth to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.service.client to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.service.repair to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.service.gender to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.service.status to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.service.type to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.service.application to spring.core, spring.beans, spring.context, spring.aop;
 
-    opens project.orgtech.models to java.persistence, org.hibernate.orm.core;
-    opens project.orgtech.auth to spring.core, spring.beans, spring.context;
+    opens project.orgtech.init to javafx.fxml, spring.beans, spring.context, spring.core, java.persistence, org.hibernate.orm.core, spring.aop;
+    opens project.orgtech.models to javafx.fxml, spring.beans, spring.context, spring.core, java.persistence, org.hibernate.orm.core, spring.aop;
+    opens project.orgtech.auth to javafx.fxml, spring.beans, spring.context, spring.core, java.persistence, org.hibernate.orm.core, spring.aop;
 
-    opens project.orgtech.frontController to javafx.fxml, spring.core, spring.beans, spring.context;
-    opens project.orgtech.frontController.auth to javafx.fxml, spring.beans, spring.context, spring.core;
-    opens project.orgtech.frontController.client to javafx.fxml, spring.beans, spring.context, spring.core;
-    opens project.orgtech.frontController.repair to javafx.fxml, spring.beans, spring.context, spring.core;
-    opens project.orgtech.frontController.utils to javafx.fxml, spring.beans, spring.context, spring.core;
-    opens project.orgtech.frontController.type to javafx.fxml, spring.beans, spring.context, spring.core;
-    opens project.orgtech.frontController.application to javafx.fxml, spring.beans, spring.context, spring.core;
+    opens project.orgtech.frontController to javafx.fxml, spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.frontController.auth to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
+    opens project.orgtech.frontController.client to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
+    opens project.orgtech.frontController.repair to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
+    opens project.orgtech.frontController.utils to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
+    opens project.orgtech.frontController.type to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
+    opens project.orgtech.frontController.application to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
 
-    opens project.orgtech.utils to javafx.fxml, spring.beans, spring.context, spring.core, java.persistence, org.hibernate.orm.core;
+    opens project.orgtech.utils to javafx.fxml, spring.beans, spring.context, spring.core, java.persistence, org.hibernate.orm.core, spring.aop;
 
     exports project.orgtech;
     exports project.orgtech.frontController;
@@ -69,5 +71,5 @@ module project.orgtech {
 
     exports project.orgtech.models;
     exports project.orgtech.utils;
-
+    exports project.orgtech.init;
 }

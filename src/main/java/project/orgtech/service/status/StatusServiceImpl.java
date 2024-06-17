@@ -2,6 +2,7 @@ package project.orgtech.service.status;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import project.orgtech.dao.status.StatusDao;
 import project.orgtech.models.Status;
 
@@ -24,6 +25,7 @@ public class StatusServiceImpl implements StatusService {
     }
 
     @Override
+    @Transactional
     public void add(Status status) {
         statusDao.add(status);
     }

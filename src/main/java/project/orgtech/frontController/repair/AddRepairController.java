@@ -43,7 +43,7 @@ public class AddRepairController {
         repairService.add(repair);
 
         // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Тип создан");
+        sceneManager.showAlert("Успешно", "Ремонт создан");
         repair = null;
         sceneManager.openScene(SaveButton, FxmlView.REPAIR_PANEL);
 

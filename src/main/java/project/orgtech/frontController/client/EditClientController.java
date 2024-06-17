@@ -43,7 +43,7 @@ public class EditClientController implements DataReceiver<Client> {
     @FXML
     private void handleSave(ActionEvent event) throws IOException {
         if (client == null) {
-            sceneManager.showAlert("Ошибка", "Тип не найден");
+            sceneManager.showAlert("Ошибка", "Клиент не найден");
             return;
         }
 
@@ -57,7 +57,7 @@ public class EditClientController implements DataReceiver<Client> {
         clientService.update(client);
 
         // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Тип сохранен");
+        sceneManager.showAlert("Успешно", "Клиент сохранен");
 
         sceneManager.openScene(SaveButton, FxmlView.CLIENT_PANEL);
     }

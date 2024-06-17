@@ -1,4 +1,4 @@
-package project.orgtech.frontController.client;
+package project.orgtech.frontController.application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,19 +6,18 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
-import project.orgtech.models.Client;
-import project.orgtech.service.client.ClientService;
+import project.orgtech.models.Repair;
+import project.orgtech.service.repair.RepairService;
 import project.orgtech.utils.FxmlView;
 import project.orgtech.utils.SceneManager;
 
 import java.io.IOException;
 
 @Controller
-public class AddClientController {
+public class AddRepairApplicationController {
 
     @Autowired
-    private ClientService clientService;
+    private RepairService repairService;
     @Autowired
     private SceneManager sceneManager;
     @FXML
@@ -36,23 +35,23 @@ public class AddClientController {
     @FXML
     private void handleSave(ActionEvent event) throws IOException {
 
-        Client client = new Client();
-        client.setBio(nameField.getText());
-        client.setPhone(descriptionField.getText());
+        Repair repair = new Repair();
+        repair.setName(nameField.getText());
+        repair.setDescription(descriptionField.getText());
 
         // Вызываем сервис для сохранения изменений
-        clientService.add(client);
+        repairService.add(repair);
 
         // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Клиент создан");
-        client = null;
-        sceneManager.openScene(SaveButton, FxmlView.CLIENT_PANEL);
+        sceneManager.showAlert("Успешно", "Ремонт создан");
+        repair = null;
+        sceneManager.openScene(SaveButton, FxmlView.REPAIR_PANEL);
 
     }
 
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(BackButton, FxmlView.CLIENT_PANEL);
+        sceneManager.openScene(BackButton, FxmlView.REPAIR_PANEL);
     }
 
 }

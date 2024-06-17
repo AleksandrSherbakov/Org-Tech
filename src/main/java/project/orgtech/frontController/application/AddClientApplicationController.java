@@ -1,4 +1,4 @@
-package project.orgtech.frontController.client;
+package project.orgtech.frontController.application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,16 +6,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
 import project.orgtech.models.Client;
 import project.orgtech.service.client.ClientService;
-import project.orgtech.utils.FxmlView;
 import project.orgtech.utils.SceneManager;
 
 import java.io.IOException;
 
 @Controller
-public class AddClientController {
+public class AddClientApplicationController {
 
     @Autowired
     private ClientService clientService;
@@ -46,13 +44,15 @@ public class AddClientController {
         // Показываем сообщение об успешном сохранении
         sceneManager.showAlert("Успешно", "Клиент создан");
         client = null;
-        sceneManager.openScene(SaveButton, FxmlView.CLIENT_PANEL);
+        //sceneManager.openScene(SaveButton, FxmlView.APPLICATION_ADD);
+        sceneManager.closeScene(SaveButton);
 
     }
 
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
-        sceneManager.openScene(BackButton, FxmlView.CLIENT_PANEL);
+        //sceneManager.openScene(BackButton, FxmlView.APPLICATION_ADD);
+        sceneManager.closeScene(BackButton);
     }
 
 }

@@ -26,11 +26,13 @@ public class ApplicationDaoImpl implements ApplicationDao{
     }
 
     @Override
+    @Transactional
     public void update(Application application) {
         entityManager.merge(application);
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
         Application application = entityManager.find(Application.class, id);
         if (application != null) {
