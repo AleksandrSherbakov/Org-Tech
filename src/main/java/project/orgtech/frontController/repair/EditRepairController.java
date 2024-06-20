@@ -45,20 +45,24 @@ public class EditRepairController implements DataReceiver<Repair> {
             sceneManager.showAlert("Ошибка", "Ремонт не найден");
             return;
         }
+        if(nameField==null||descriptionField==null){
+            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
+        }
+        else {
+            String newName = nameField.getText();
+            String newDescription = descriptionField.getText();
 
-        String newName = nameField.getText();
-        String newDescription = descriptionField.getText();
+            repair.setName(newName);
+            repair.setDescription(newDescription);
 
-        repair.setName(newName);
-        repair.setDescription(newDescription);
+            // Вызываем сервис для сохранения изменений
+            repairService.update(repair);
 
-        // Вызываем сервис для сохранения изменений
-        repairService.update(repair);
+            // Показываем сообщение об успешном сохранении
+            sceneManager.showAlert("Успешно", "Ремонт сохранен");
 
-        // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Ремонт сохранен");
-
-        sceneManager.openScene(SaveButton, FxmlView.REPAIR_PANEL);
+            sceneManager.openScene(SaveButton, FxmlView.REPAIR_PANEL);
+        }
     }
 
     @FXML

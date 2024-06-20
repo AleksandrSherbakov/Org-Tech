@@ -46,21 +46,25 @@ public class EditTypeController implements DataReceiver<Type> {
             sceneManager.showAlert("Ошибка", "Тип не найден");
             return;
         }
+        if(nameField==null||descriptionField==null){
+            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
+        }
+        else {
+            String newName = nameField.getText();
+            String newDescription = descriptionField.getText();
 
-        String newName = nameField.getText();
-        String newDescription = descriptionField.getText();
+            // Обновляем объект Type
+            type.setName(newName);
+            type.setDescription(newDescription);
 
-        // Обновляем объект Type
-        type.setName(newName);
-        type.setDescription(newDescription);
+            // Вызываем сервис для сохранения изменений
+            typeService.update(type);
 
-        // Вызываем сервис для сохранения изменений
-        typeService.update(type);
+            // Показываем сообщение об успешном сохранении
+            sceneManager.showAlert("Успешно", "Тип сохранен");
 
-        // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Тип сохранен");
-
-        sceneManager.openScene(SaveButton, FxmlView.TYPE_PANEL);
+            sceneManager.openScene(SaveButton, FxmlView.TYPE_PANEL);
+        }
     }
 
     @FXML

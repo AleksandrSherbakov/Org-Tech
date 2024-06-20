@@ -3,10 +3,12 @@ package project.orgtech.frontController.master;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import project.orgtech.frontController.utils.DataReceiver;
+import project.orgtech.models.Gender;
 import project.orgtech.models.Master;
 import project.orgtech.service.auth.MasterService;
 import project.orgtech.service.gender.GenderService;
@@ -40,7 +42,7 @@ public class MasterEditController {
     private TextField lastNameField;
 
     @FXML
-    private TextField genderField;
+    private ComboBox<Gender> genderComboBox;
 
     @FXML
     private Button saveButton;
@@ -58,7 +60,7 @@ public class MasterEditController {
             master.setLastName(lastNameField.getText());
             // Assuming you have a way to convert the gender name back to a Gender object
             // e.g., using a GenderService or a similar mechanism
-            master.setGender(genderService.getById(Long.valueOf(genderField.getId())));
+            master.setGender(genderService.getById(Long.parseLong(genderField.getId())+1L));
             masterService.update(master);
             AuthManager.setMaster(master); // Update the AuthManager with the updated master
             sceneManager.showAlert("Успех", "Изменения сохранены успешно");
@@ -79,7 +81,7 @@ public class MasterEditController {
             firstNameField.setText(master.getFirstName());
             middleNameField.setText(master.getMiddleName());
             lastNameField.setText(master.getLastName());
-            genderField.setText(master.getGender().getName());
+            genderComboBox.setValue(master.getGender());
         }
     }
 }

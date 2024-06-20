@@ -34,19 +34,22 @@ public class AddTypeController  {
 
     @FXML
     private void handleSave(ActionEvent event) throws IOException {
+        if(nameField==null||descriptionField==null){
+            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
+        }
+        else {
+            Type type = new Type();
+            type.setName(nameField.getText());
+            type.setDescription(descriptionField.getText());
 
-        Type type = new Type();
-        type.setName(nameField.getText());
-        type.setDescription(descriptionField.getText());
+            // Вызываем сервис для сохранения изменений
+            typeService.add(type);
 
-        // Вызываем сервис для сохранения изменений
-        typeService.add(type);
-
-        // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Тип создан");
-        type = null;
-        sceneManager.openScene(SaveButton, FxmlView.TYPE_PANEL);
-
+            // Показываем сообщение об успешном сохранении
+            sceneManager.showAlert("Успешно", "Тип создан");
+            type = null;
+            sceneManager.openScene(SaveButton, FxmlView.TYPE_PANEL);
+        }
     }
 
     @FXML

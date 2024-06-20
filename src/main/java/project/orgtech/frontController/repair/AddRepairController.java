@@ -35,18 +35,22 @@ public class AddRepairController {
     @FXML
     private void handleSave(ActionEvent event) throws IOException {
 
-        Repair repair = new Repair();
-        repair.setName(nameField.getText());
-        repair.setDescription(descriptionField.getText());
+        if(nameField==null||descriptionField==null){
+            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
+        }
+        else {
+            Repair repair = new Repair();
+            repair.setName(nameField.getText());
+            repair.setDescription(descriptionField.getText());
 
-        // Вызываем сервис для сохранения изменений
-        repairService.add(repair);
+            // Вызываем сервис для сохранения изменений
+            repairService.add(repair);
 
-        // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Ремонт создан");
-        repair = null;
-        sceneManager.openScene(SaveButton, FxmlView.REPAIR_PANEL);
-
+            // Показываем сообщение об успешном сохранении
+            sceneManager.showAlert("Успешно", "Ремонт создан");
+            repair = null;
+            sceneManager.openScene(SaveButton, FxmlView.REPAIR_PANEL);
+        }
     }
 
     @FXML

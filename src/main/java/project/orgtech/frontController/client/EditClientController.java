@@ -46,20 +46,24 @@ public class EditClientController implements DataReceiver<Client> {
             sceneManager.showAlert("Ошибка", "Клиент не найден");
             return;
         }
+        if(nameField==null||descriptionField==null){
+            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
+        }
+        else {
+            String newName = nameField.getText();
+            String newDescription = descriptionField.getText();
 
-        String newName = nameField.getText();
-        String newDescription = descriptionField.getText();
+            client.setBio(newName);
+            client.setPhone(newDescription);
 
-        client.setBio(newName);
-        client.setPhone(newDescription);
+            // Вызываем сервис для сохранения изменений
+            clientService.update(client);
 
-        // Вызываем сервис для сохранения изменений
-        clientService.update(client);
+            // Показываем сообщение об успешном сохранении
+            sceneManager.showAlert("Успешно", "Клиент сохранен");
 
-        // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Клиент сохранен");
-
-        sceneManager.openScene(SaveButton, FxmlView.CLIENT_PANEL);
+            sceneManager.openScene(SaveButton, FxmlView.CLIENT_PANEL);
+        }
     }
 
     @FXML

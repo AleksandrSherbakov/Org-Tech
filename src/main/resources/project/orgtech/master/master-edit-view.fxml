@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.master.MasterEditController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.master.MasterEditController">
     <children>
-        <AnchorPane layoutY="95.0" prefHeight="505.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
+        <AnchorPane layoutY="95.0" prefHeight="985.0" prefWidth="1920.0" style="-fx-background-color: #fafafa;">
             <children>
-                <Label layoutX="193.0" layoutY="50.0" text="Логин:" textFill="#000000">
+                <Label layoutX="500.0" layoutY="100.0" text="Логин:" textFill="#000000">
                     <font>
-                        <Font size="16.0" />
+                        <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="loginField" layoutX="193.0" layoutY="80.0" prefHeight="41.0" prefWidth="423.0">
+                <TextField fx:id="loginField" layoutX="500.0" layoutY="150.0" prefHeight="60.0" prefWidth="900.0">
                     <font>
-                        <Font size="16.0" />
+                        <Font size="32.0" />
                     </font>
                 </TextField>
-                <Label layoutX="193.0" layoutY="140.0" text="Фамилия:" textFill="#000000">
+                <Label layoutX="500.0" layoutY="250.0" text="Фамилия:" textFill="#000000">
                     <font>
-                        <Font size="16.0" />
+                        <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="firstNameField" layoutX="193.0" layoutY="170.0" prefHeight="41.0" prefWidth="423.0">
+                <TextField fx:id="firstNameField" layoutX="500.0" layoutY="300.0" prefHeight="60.0" prefWidth="900.0">
                     <font>
-                        <Font size="16.0" />
+                        <Font size="32.0" />
                     </font>
                 </TextField>
-                <Label layoutX="193.0" layoutY="230.0" text="Имя:" textFill="#000000">
+                <Label layoutX="500.0" layoutY="400.0" text="Имя:" textFill="#000000">
                     <font>
-                        <Font size="16.0" />
+                        <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="middleNameField" layoutX="193.0" layoutY="260.0" prefHeight="41.0" prefWidth="423.0">
+                <TextField fx:id="middleNameField" layoutX="500.0" layoutY="450.0" prefHeight="60.0" prefWidth="900.0">
                     <font>
-                        <Font size="16.0" />
+                        <Font size="32.0" />
                     </font>
                 </TextField>
-                <Label layoutX="193.0" layoutY="320.0" text="Отчество:" textFill="#000000">
+                <Label layoutX="500.0" layoutY="550.0" text="Отчество:" textFill="#000000">
                     <font>
-                        <Font size="16.0" />
+                        <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="lastNameField" layoutX="193.0" layoutY="350.0" prefHeight="41.0" prefWidth="423.0">
+                <TextField fx:id="lastNameField" layoutX="500.0" layoutY="600.0" prefHeight="60.0" prefWidth="900.0">
                     <font>
-                        <Font size="16.0" />
+                        <Font size="32.0" />
                     </font>
                 </TextField>
-                <Label layoutX="193.0" layoutY="410.0" text="Пол:" textFill="#000000">
+                <Label layoutX="500.0" layoutY="700.0" text="Пол:" textFill="#000000">
                     <font>
-                        <Font size="16.0" />
+                        <Font size="32.0" />
                     </font>
                 </Label>
-                <ComboBox fx:id="genderComboBox" layoutX="193.0" layoutY="440.0" prefHeight="41.0" prefWidth="423.0">
+                <ComboBox fx:id="genderComboBox" layoutX="500.0" layoutY="750.0" prefHeight="60.0" prefWidth="900.0">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="Мужской" />
@@ -66,21 +66,21 @@
                         </FXCollections>
                     </items>
                 </ComboBox>
-                <Button fx:id="saveButton" layoutX="230.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleSaveButton" prefHeight="41.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Сохранить">
+                <Button fx:id="saveButton" layoutX="650.0" layoutY="850.0" mnemonicParsing="false" onAction="#handleSaveButton" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #F39c53;" text="Сохранить">
                     <font>
-                        <Font name="Comic Sans MS" size="16.0" />
+                        <Font name="Comic Sans MS" size="32.0" />
                     </font>
                 </Button>
-                <Button fx:id="backButton" layoutX="434.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="41.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Отмена">
+                <Button fx:id="backButton" layoutX="1050.0" layoutY="850.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #F39c53;" text="Отмена">
                     <font>
-                        <Font name="Comic Sans MS" size="16.0" />
+                        <Font name="Comic Sans MS" size="32.0" />
                     </font>
                 </Button>
             </children>
         </AnchorPane>
-        <Label layoutX="253.0" layoutY="23.0" prefHeight="42.0" prefWidth="515.0" text="Редактирование мастера" textAlignment="CENTER" textFill="WHITE">
+        <Label layoutX="660.0" layoutY="20.0" prefHeight="60.0" prefWidth="600.0" text="Редактирование мастера" textAlignment="CENTER" textFill="WHITE">
             <font>
-                <Font name="Comic Sans MS" size="36.0" />
+                <Font name="Comic Sans MS" size="48.0" />
             </font>
         </Label>
     </children>
