@@ -26,11 +26,13 @@ public class MasterDaoImpl implements MasterDao {
     }
 
     @Override
+    @Transactional
     public void update(Master application) {
         entityManager.merge(application);
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
         Master application = entityManager.find(Master.class, id);
         if (application != null) {

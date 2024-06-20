@@ -45,6 +45,8 @@ public class MainController {
 
     @FXML
     private Button ReportsButton;
+    @FXML
+    private Button MasterArea;
 
     private ObservableList<Application> applicationObservableList;
 
@@ -60,12 +62,16 @@ public class MainController {
 
     @FXML
     private void handleReportsButton(ActionEvent event) throws IOException {
-        //sceneManager.openScene(ReportsButton, FxmlView.REPORTS);
+        sceneManager.getReports(ReportsButton);
     }
 
     @FXML
     private void handleCreateButton(ActionEvent event) throws IOException {
         sceneManager.openScene(CreateButton, FxmlView.APPLICATION_ADD);
+    }
+    @FXML
+    private void handleMasterArea(ActionEvent event) throws IOException {
+        sceneManager.openScene(CreateButton, FxmlView.MASTER_INFO);
     }
 
     @FXML

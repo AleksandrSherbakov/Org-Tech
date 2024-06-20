@@ -27,4 +27,10 @@ public class MasterServiceImpl implements MasterService{
     public Master findByLogin(String login) {
         return masterDao.findByLogin(login);
     }
+
+    @Override
+    @Transactional
+    public void update(Master master) {
+        masterDao.update(master);
+    }
 }

@@ -5,16 +5,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import project.orgtech.StartApplication;
 import project.orgtech.frontController.utils.DataReceiver;
+import project.orgtech.service.exel.ExcelExportService;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.function.Consumer;
 
 @Component
 public class SceneManager {
+
+    @Autowired
+    ExcelExportService excelExportService;
 
     public void openScene(Button button, FxmlView fxmlView) throws IOException {
         Stage currentStage = (Stage) button.getScene().getWindow();
@@ -77,5 +84,27 @@ public class SceneManager {
         alert.setContentText(content);
         alert.showAndWait();
     }
+    public void getReports(Button button) throws IOException {
+        Stage currentStage = (Stage) button.getScene().getWindow();
+        FileChooser fileChooser = new FileChooser();
 
+        // Установка заголовка диалога
+        fileChooser.setTitle("Save Excel File");
+
+        // Установка базового имени файла
+        fileChooser.setInitialFileName("example.xlsx");
+
+        // Установка фильтра на типы файлов
+        FileChooser.ExtensionFilter extFilter =
+                new FileChooser.ExtensionFilter("Excel files (*.xlsx)", "*.xlsx");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+        // Показать диалог для сохранения файла
+        File file = fileChooser.showSaveDialog(currentStage);
+        if (file != null) {
+            // Ваш код для сохранения файла по выбранному пути
+            System.out.println("File saved to: " + file.getAbsolutePath());
+        }
+        excelExportService.exportApplicationsToExcel(file.getAbsolutePath());
+    }
 }

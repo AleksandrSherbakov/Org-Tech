@@ -68,7 +68,7 @@ public class InfoApplicationController implements DataReceiver<Application> {
             repairField.setText(currentApplication.getRepair().getName());
             typeField.setText(currentApplication.getType().getName());
             statusField.setText(currentApplication.getStatus().getName());
-            dateField.setText(currentApplication.getDate().toString());
+            dateField.setText(currentApplication.getDate().getDay() + " : " + currentApplication.getDate().getMonth() + " : " + currentApplication.getDate().getYear());
         }
     }
 

@@ -3,6 +3,7 @@ package project.orgtech.init;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import project.orgtech.models.Application;
 import project.orgtech.models.Status;
 import project.orgtech.models.Gender;
 import project.orgtech.models.Type;
@@ -18,6 +19,8 @@ import project.orgtech.service.status.StatusService;
 import project.orgtech.service.type.TypeService;
 
 import javax.annotation.PostConstruct;
+import java.math.BigDecimal;
+import java.util.Date;
 
 @Component
 public class Init {
@@ -71,7 +74,7 @@ public class Init {
         master.setLastName("qwe");
         master.setLogin("qwe");
         master.setPassword("qwe");
-        master.setGender(genderService.getById(0L));
+        master.setGender(genderService.getById(1L));
         masterService.add(master);
 
         // Create and save repairs
@@ -95,5 +98,15 @@ public class Init {
             client.setPhone("88005553535");
             clientService.add(client);
         }
+        Application application = new Application();
+        application.setName("application1");
+        application.setPrice(BigDecimal.valueOf(1000));
+        application.setDate(new Date(2024,06,24));
+        application.setMaster(master);
+        application.setClient(clientService.getById(1L));
+        application.setStatus(status1);
+        application.setType(typeService.getById(1L));
+        application.setRepair(repairService.getById(1L));
+        applicationService.add(application);
     }
 }

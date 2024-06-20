@@ -6,5 +6,6 @@ public interface MasterService {
     Master getById(Long id);
     void add(Master master);
     Master findByLogin(String login);
+    void update(Master master);
 
 }

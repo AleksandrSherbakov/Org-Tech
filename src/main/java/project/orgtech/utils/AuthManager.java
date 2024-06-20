@@ -8,7 +8,7 @@ public class AuthManager {
 
     static Master curentMaster;
 
-    public static Master getMaser() {
+    public static Master getMaster() {
         return curentMaster;
     }
 

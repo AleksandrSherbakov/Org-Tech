@@ -14,6 +14,8 @@ module project.orgtech {
     requires org.hibernate.orm.core;
     requires java.annotation;
     requires spring.aop;
+    requires org.apache.poi.poi;
+    requires org.apache.poi.ooxml;
 
     opens project.orgtech to javafx.fxml, spring.core, spring.beans, spring.context, spring.aop;
     opens project.orgtech.config to spring.core, spring.beans, spring.context, spring.aop;
@@ -33,6 +35,7 @@ module project.orgtech {
     opens project.orgtech.service.status to spring.core, spring.beans, spring.context, spring.aop;
     opens project.orgtech.service.type to spring.core, spring.beans, spring.context, spring.aop;
     opens project.orgtech.service.application to spring.core, spring.beans, spring.context, spring.aop;
+    opens project.orgtech.service.exel to spring.core, spring.beans, spring.context, spring.aop;
 
     opens project.orgtech.init to javafx.fxml, spring.beans, spring.context, spring.core, java.persistence, org.hibernate.orm.core, spring.aop;
     opens project.orgtech.models to javafx.fxml, spring.beans, spring.context, spring.core, java.persistence, org.hibernate.orm.core, spring.aop;
@@ -45,6 +48,7 @@ module project.orgtech {
     opens project.orgtech.frontController.utils to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
     opens project.orgtech.frontController.type to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
     opens project.orgtech.frontController.application to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
+    opens project.orgtech.frontController.master to javafx.fxml, spring.beans, spring.context, spring.core, spring.aop;
 
     opens project.orgtech.utils to javafx.fxml, spring.beans, spring.context, spring.core, java.persistence, org.hibernate.orm.core, spring.aop;
 
@@ -59,6 +63,7 @@ module project.orgtech {
     exports project.orgtech.service.status;
     exports project.orgtech.service.type;
     exports project.orgtech.service.application;
+    exports project.orgtech.service.exel;
 
     /*exports project.orgtech.dao;*/
     exports project.orgtech.dao.auth;

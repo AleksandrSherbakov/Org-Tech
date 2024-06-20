@@ -3,6 +3,8 @@ package project.orgtech.utils;
 public enum FxmlView {
     LOGIN("/project/orgtech/auth/login-view.fxml", "Вход"),
     REGISTRATION("/project/orgtech/auth/registration-view.fxml", "Регистрация"),
+    MASTER_INFO("/project/orgtech/master/master-info-view.fxml", "Информация мастера"),
+    EDIT_MASTER("/project/orgtech/master/master-edit-view.fxml", "Редактировать мастера"),
     CLIENT_ADD("/project/orgtech/client/add-client-view.fxml", "Добавить клиента"),
     CLIENT_EDIT("/project/orgtech/client/edit-client-view.fxml", "Редактировать клиента"),
     CLIENT_INFO("/project/orgtech/client/info-client-view.fxml", "Информация клиента"),

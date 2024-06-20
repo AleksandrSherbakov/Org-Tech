@@ -75,10 +75,11 @@ public class AddApplicationController {
     }
 
     private void loadComboBoxData() {
-        clientComboBox.setItems(FXCollections.observableArrayList(clientService.getAll()));
-        repairComboBox.setItems(FXCollections.observableArrayList(repairService.getAll()));
-        typeComboBox.setItems(FXCollections.observableArrayList(typeService.getAll()));
-        statusComboBox.setItems(FXCollections.observableArrayList(statusService.getAll()));
+        // Create a Timeline to add a delay before executing the data loading
+            clientComboBox.setItems(FXCollections.observableArrayList(clientService.getAll()));
+            repairComboBox.setItems(FXCollections.observableArrayList(repairService.getAll()));
+            typeComboBox.setItems(FXCollections.observableArrayList(typeService.getAll()));
+            statusComboBox.setItems(FXCollections.observableArrayList(statusService.getAll()));
     }
 
     @FXML
@@ -92,7 +93,7 @@ public class AddApplicationController {
             application.setType(typeComboBox.getValue());
             application.setStatus(statusComboBox.getValue());
             application.setDate(new Date());
-            application.setMaster(AuthManager.getMaser());
+            application.setMaster(AuthManager.getMaster());
 
             applicationService.add(application);
 

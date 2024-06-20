@@ -103,7 +103,7 @@ public class EditApplicationController implements DataReceiver<Application> {
             if (currentApplication == null) {
                 currentApplication = new Application();
                 currentApplication.setDate(new Date());
-                currentApplication.setMaster(AuthManager.getMaser());
+                currentApplication.setMaster(AuthManager.getMaster());
             }
 
             currentApplication.setName(nameField.getText());
