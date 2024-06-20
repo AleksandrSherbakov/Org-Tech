@@ -188,4 +188,7 @@ public class EditApplicationController implements DataReceiver<Application> {
         sceneManager.openScene(FxmlView.TYPE_APPLICATION_ADD);
         loadComboBoxData();
     }
+
+    public void handleSaveButton(ActionEvent actionEvent) {
+    }
 }

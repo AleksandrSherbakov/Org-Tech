@@ -19,7 +19,7 @@ import project.orgtech.utils.SceneManager;
 import java.io.IOException;
 
 @Controller
-public class MasterEditController {
+public class MasterEditController implements DataReceiver<Master> {
 
     @Autowired
     private MasterService masterService;
@@ -60,7 +60,7 @@ public class MasterEditController {
             master.setLastName(lastNameField.getText());
             // Assuming you have a way to convert the gender name back to a Gender object
             // e.g., using a GenderService or a similar mechanism
-            master.setGender(genderService.getById(Long.parseLong(genderField.getId())+1L));
+            master.setGender(genderService.getById(Long.parseLong(genderComboBox.getId())+1L));
             masterService.update(master);
             AuthManager.setMaster(master); // Update the AuthManager with the updated master
             sceneManager.showAlert("Успех", "Изменения сохранены успешно");
@@ -83,5 +83,10 @@ public class MasterEditController {
             lastNameField.setText(master.getLastName());
             genderComboBox.setValue(master.getGender());
         }
+    }
+
+    @Override
+    public void setData(Master data) {
+
     }
 }

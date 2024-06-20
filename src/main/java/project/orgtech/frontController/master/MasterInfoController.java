@@ -3,9 +3,11 @@ package project.orgtech.frontController.master;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import project.orgtech.frontController.utils.DataReceiver;
 import project.orgtech.models.Master;
 import project.orgtech.utils.AuthManager;
 import project.orgtech.utils.FxmlView;
@@ -14,13 +16,20 @@ import project.orgtech.utils.SceneManager;
 import java.io.IOException;
 
 @Controller
-public class MasterInfoController {
+public class MasterInfoController implements DataReceiver<Master> {
 
+
+    //public TextField loginField;
+    //public TextField firstNameField;
+    //public TextField middleNameField;
+    //public TextField lastNameField;
+    public ComboBox genderComboBox;
+    public Button saveButton;
     @Autowired
     private SceneManager sceneManager;
 
     @FXML
-    private TextField loginLabel;
+    private TextField firstNameField;
 
     @FXML
     private TextField firstNameLabel;
@@ -63,11 +72,20 @@ public class MasterInfoController {
     public void initialize() {
         Master master = AuthManager.getMaster();
         if (master != null) {
-            loginLabel.setText(master.getLogin());
+            firstNameField.setText(master.getLogin());
             firstNameLabel.setText(master.getFirstName());
             middleNameLabel.setText(master.getMiddleName());
             lastNameLabel.setText(master.getLastName());
             genderLabel.setText(master.getGender().getName());
         }
     }
+
+    @Override
+    public void setData(Master data) {
+
+    }
+
+    public void handleSaveButton(ActionEvent actionEvent) {
+    }
+    
 }
