@@ -60,7 +60,7 @@ public class MasterEditController implements DataReceiver<Master> {
             master.setLastName(lastNameField.getText());
             // Assuming you have a way to convert the gender name back to a Gender object
             // e.g., using a GenderService or a similar mechanism
-            master.setGender(genderService.getById(Long.parseLong(genderComboBox.getId())+1L));
+            master.setGender(genderService.getById(Long.parseLong(genderComboBox.getId())+1));
             masterService.update(master);
             AuthManager.setMaster(master); // Update the AuthManager with the updated master
             sceneManager.showAlert("Успех", "Изменения сохранены успешно");

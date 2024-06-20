@@ -1,11 +1,13 @@
 package project.orgtech.utils;
 
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.FileChooser;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -33,7 +35,17 @@ public class SceneManager {
         Stage newStage = new Stage();
         newStage.setTitle(title);
         newStage.setScene(new Scene(root));
+        /*Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+
+        // Устанавливаем размеры окна на размеры экрана
+        newStage.setX(primaryScreenBounds.getMinX());
+        newStage.setY(primaryScreenBounds.getMinY());
+        newStage.setWidth(primaryScreenBounds.getWidth());
+        newStage.setHeight(primaryScreenBounds.getHeight());*/
+        newStage.setMaximized(true);
+
         newStage.show();
+
         if (currentStage != null) {
             currentStage.close();
         }

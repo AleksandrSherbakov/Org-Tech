@@ -99,7 +99,7 @@ public class Init {
             clientService.add(client);
         }
         Application application = new Application();
-        application.setName("application1");
+        application.setName("Ремонт телефона");
         application.setPrice(BigDecimal.valueOf(1000));
         application.setDate(new Date(2024,06,24));
         application.setMaster(master);
