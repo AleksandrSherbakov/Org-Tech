@@ -20,7 +20,6 @@
                         <Font size="16.0" />
                     </font>
                 </TextField>
-
                 <Label layoutX="202.0" layoutY="99.0" text="Фамилия:" textFill="#000000">
                     <font>
                         <Font size="16.0" />
@@ -31,7 +30,6 @@
                         <Font size="16.0" />
                     </font>
                 </TextField>
-
                 <Label layoutX="202.0" layoutY="180.0" text="Имя:" textFill="#000000">
                     <font>
                         <Font size="16.0" />
@@ -42,7 +40,6 @@
                         <Font size="16.0" />
                     </font>
                 </TextField>
-
                 <Label layoutX="201.0" layoutY="258.0" text="Отчество:" textFill="#000000">
                     <font>
                         <Font size="16.0" />
@@ -53,7 +50,6 @@
                         <Font size="16.0" />
                     </font>
                 </TextField>
-
                 <Label layoutX="203.0" layoutY="331.0" text="Пол:" textFill="#000000">
                     <font>
                         <Font size="16.0" />
@@ -64,19 +60,16 @@
                         <Font size="16.0" />
                     </font>
                 </TextField>
-
                 <Button fx:id="editButton" layoutX="132.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="41.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Редактировать">
                     <font>
                         <Font name="Comic Sans MS" size="16.0" />
                     </font>
                 </Button>
-
                 <Button fx:id="backButton" layoutX="328.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="41.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Назад">
                     <font>
                         <Font name="Comic Sans MS" size="16.0" />
                     </font>
                 </Button>
-
                 <Button fx:id="exitButton" layoutX="520.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="41.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Выход">
                     <font>
                         <Font name="Comic Sans MS" size="16.0" />
@@ -84,7 +77,6 @@
                 </Button>
             </children>
         </AnchorPane>
-
         <Label layoutX="253.0" layoutY="23.0" prefHeight="42.0" prefWidth="515.0" text="Информация о мастере" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Comic Sans MS" size="36.0" />

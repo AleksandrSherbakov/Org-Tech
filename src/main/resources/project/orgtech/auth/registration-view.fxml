@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -8,38 +10,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.auth.RegistrationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.auth.RegistrationController">
    <children>
-      <AnchorPane layoutY="95.0" prefHeight="505.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
+      <AnchorPane layoutY="143.0" prefHeight="850.0" prefWidth="1920.0" style="-fx-background-color: #fafafa;">
          <children>
-            <TextField fx:id="firstNameText" layoutX="79.0" layoutY="94.0" prefHeight="51.0" prefWidth="215.0" promptText="Фамилия">
+            <TextField fx:id="firstNameText" layoutX="450.0" layoutY="150.0" prefHeight="82.0" prefWidth="338.0" promptText="Фамилия">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </TextField>
-            <TextField fx:id="middleNameText" layoutX="294.0" layoutY="94.0" prefHeight="51.0" prefWidth="215.0" promptText="Имя">
+            <TextField fx:id="middleNameText" layoutX="805.0" layoutY="150.0" prefHeight="82.0" prefWidth="338.0" promptText="Имя">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </TextField>
-            <TextField fx:id="lastNameText" layoutX="509.0" layoutY="94.0" prefHeight="51.0" prefWidth="215.0" promptText="Отчество">
+            <TextField fx:id="lastNameText" layoutX="1161.0" layoutY="150.0" prefHeight="82.0" prefWidth="338.0" promptText="Отчество">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </TextField>
-            <TextField fx:id="loginText" layoutX="231.0" layoutY="188.0" prefHeight="51.0" prefWidth="338.0" promptText="Логин">
+            <TextField fx:id="loginText" layoutX="551.0" layoutY="261.0" prefHeight="82.0" prefWidth="846.0" promptText="Логин">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="passwordText" layoutX="231.0" layoutY="276.0" prefHeight="51.0" prefWidth="338.0" promptText="Пароль">
+            <PasswordField fx:id="passwordText" layoutX="551.0" layoutY="368.0" prefHeight="82.0" prefWidth="846.0" promptText="Пароль">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </PasswordField>
-            <ComboBox fx:id="genderComboBox" layoutX="231.0" layoutY="364.0" prefHeight="51.0" prefWidth="338.0" promptText="Выберите пол">
+            <ComboBox fx:id="genderComboBox" layoutX="551.0" layoutY="475.0" prefHeight="82.0" prefWidth="846.0" promptText="Выберите пол">
                <items>
                   <FXCollections fx:factory="observableArrayList">
                      <String fx:value="Мужской" />
@@ -47,21 +47,26 @@
                   </FXCollections>
                </items>
             </ComboBox>
-            <Button fx:id="registerButton" layoutX="165.0" layoutY="432.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="215.0" style="-fx-background-color: #F39c53;" text="Зарегестрироваться" onAction="#handleRegisterButton">
+            <Button fx:id="registerButton" layoutX="589.0" layoutY="648.0" mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="68.0" prefWidth="362.0" style="-fx-background-color: #F39c53;" text="Зарегистрироваться">
                <font>
-                  <Font name="Comic Sans MS" size="18.0" />
+                  <Font name="Comic Sans MS" size="32.0" />
                </font>
             </Button>
-            <Button fx:id="backButton" layoutX="402.0" layoutY="432.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="215.0" style="-fx-background-color: #F39c53;" text="Назад" onAction="#handleBackButton">
+            <Button fx:id="backButton" layoutX="993.0" layoutY="648.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="68.0" prefWidth="362.0" style="-fx-background-color: #F39c53;" text="Назад">
                <font>
-                  <Font name="Comic Sans MS" size="18.0" />
+                  <Font name="Comic Sans MS" size="32.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <Label layoutX="242.0" layoutY="14.0" prefHeight="67.0" prefWidth="316.0" text="Авторизация" textFill="WHITE">
+      <Label layoutX="735.0" layoutY="27.0" prefHeight="84.0" prefWidth="1030.0" text="Авторизация" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="Comic Sans MS" size="48.0" />
+            <Font name="Comic Sans MS" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="834.0" layoutY="1027.0" prefHeight="30.0" prefWidth="400.0" text="Дипломная работа" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
          </font>
       </Label>
    </children>

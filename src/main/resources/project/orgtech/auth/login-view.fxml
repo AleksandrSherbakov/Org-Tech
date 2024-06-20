@@ -7,33 +7,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.auth.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.auth.LoginController">
    <children>
-      <AnchorPane layoutY="95.0" prefHeight="505.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
+      <AnchorPane layoutY="143.0" prefHeight="850.0" prefWidth="1920.0" style="-fx-background-color: #fafafa;">
          <children>
-            <TextField fx:id="loginText" layoutX="231.0" layoutY="150.0" prefHeight="51.0" prefWidth="338.0" promptText="Логин">
+            <TextField fx:id="loginText" layoutX="537.0" layoutY="259.0" prefHeight="82.0" prefWidth="846.0" promptText="Логин">
                <font>
-                  <Font size="18.0" />
-               </font></TextField>
-            <PasswordField fx:id="passwordText" layoutX="231.0" layoutY="227.0" prefHeight="51.0" prefWidth="338.0" promptText="Пароль">
+                  <Font size="32.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordText" layoutX="537.0" layoutY="433.0" prefHeight="82.0" prefWidth="846.0" promptText="Пароль">
                <font>
-                  <Font size="18.0" />
-               </font></PasswordField>
-            <Button fx:id="loginButton" layoutX="293.0" layoutY="384.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="215.0" style="-fx-background-color: #F39c53;" text="Войти" onAction="#handleLoginButton">
+                  <Font size="32.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="loginButton" layoutX="758.0" layoutY="665.0" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="68.0" prefWidth="432.0" style="-fx-background-color: #F39c53;" text="Войти">
                <font>
-                  <Font name="Comic Sans MS" size="18.0" />
+                  <Font name="Comic Sans MS" size="32.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <Button fx:id="registrationButton" layoutX="562.0" layoutY="24.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="215.0" style="-fx-background-color: #F39c53;" text="Зарегестрироваться" onAction="#handleRegistrationButton">
+      <Button fx:id="registrationButton" layoutX="1410.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleRegistrationButton" prefHeight="68.0" prefWidth="432.0" style="-fx-background-color: #F39c53;" text="Зарегистрироваться">
          <font>
-            <Font name="Comic Sans MS" size="18.0" />
+            <Font name="Comic Sans MS" size="32.0" />
          </font>
       </Button>
-      <Label layoutX="242.0" layoutY="14.0" prefHeight="67.0" prefWidth="316.0" text="Авторизация" textFill="WHITE">
+      <Label layoutX="879.0" layoutY="27.0" prefHeight="84.0" prefWidth="306.0" text="Авторизация" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="Comic Sans MS" size="48.0" />
+            <Font name="Comic Sans MS" size="44.0" />
          </font>
       </Label>
    </children>

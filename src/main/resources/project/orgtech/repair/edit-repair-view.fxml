@@ -6,45 +6,50 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.repair.EditRepairController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.repair.EditRepairController">
    <children>
-      <AnchorPane layoutY="95.0" prefHeight="505.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
+      <AnchorPane layoutY="143.0" prefHeight="850.0" prefWidth="1920.0" style="-fx-background-color: #fafafa;">
          <children>
-            <Label layoutX="193.0" layoutY="99.0" text="Название:" textFill="#000000">
+            <Label layoutX="562.0" layoutY="199.0" text="Название:" textFill="#000000">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Comic Sans MS" size="32.0" />
                </font>
             </Label>
-            <TextField fx:id="nameField" layoutX="193.0" layoutY="129.0" prefHeight="41.0" prefWidth="423.0">
+            <TextField fx:id="nameField" layoutX="551.0" layoutY="261.0" prefHeight="82.0" prefWidth="846.0">
                <font>
-                  <Font size="16.0" />
+                  <Font size="32.0" />
                </font>
             </TextField>
-            <Label layoutX="193.0" layoutY="182.0" text="Описание:" textFill="#000000">
+            <Label layoutX="556.0" layoutY="368.0" text="Описание:" textFill="#000000">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Comic Sans MS" size="32.0" />
                </font>
             </Label>
-            <TextField fx:id="descriptionField" layoutX="193.0" layoutY="212.0" prefHeight="41.0" prefWidth="423.0">
+            <TextField fx:id="descriptionField" layoutX="551.0" layoutY="433.0" prefHeight="82.0" prefWidth="846.0">
                <font>
-                  <Font size="16.0" />
+                  <Font size="32.0" />
                </font>
             </TextField>
-            <Button fx:id="SaveButton" layoutX="230.0" layoutY="433.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Ок">
+            <Button fx:id="SaveButton" layoutX="594.0" layoutY="648.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="50.0" prefWidth="306.0" style="-fx-background-color: #F39c53;" text="Ок">
                <font>
-                  <Font name="Comic Sans MS" size="16.0" />
+                  <Font name="Comic Sans MS" size="32.0" />
                </font>
             </Button>
-            <Button fx:id="BackButton" layoutX="434.0" layoutY="433.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F39c53;" text="Отмена">
+            <Button fx:id="BackButton" layoutX="1034.0" layoutY="648.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="50.0" prefWidth="306.0" style="-fx-background-color: #F39c53;" text="Отмена">
                <font>
-                  <Font name="Comic Sans MS" size="16.0" />
+                  <Font name="Comic Sans MS" size="32.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <Label layoutX="253.0" layoutY="23.0" prefHeight="42.0" prefWidth="515.0" text="Ремонт орг техники" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="735.0" layoutY="27.0" prefHeight="84.0" prefWidth="1030.0" text="Ремонт орг техники" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="Comic Sans MS" size="36.0" />
+            <Font name="Comic Sans MS" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="824.0" layoutY="1017.0" prefHeight="30.0" prefWidth="400.0" text="Дипломная работа" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
          </font>
       </Label>
    </children>
