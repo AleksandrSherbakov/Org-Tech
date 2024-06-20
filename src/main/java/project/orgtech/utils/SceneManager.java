@@ -35,13 +35,13 @@ public class SceneManager {
         Stage newStage = new Stage();
         newStage.setTitle(title);
         newStage.setScene(new Scene(root));
-        /*Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
 
         // Устанавливаем размеры окна на размеры экрана
         newStage.setX(primaryScreenBounds.getMinX());
         newStage.setY(primaryScreenBounds.getMinY());
         newStage.setWidth(primaryScreenBounds.getWidth());
-        newStage.setHeight(primaryScreenBounds.getHeight());*/
+        newStage.setHeight(primaryScreenBounds.getHeight());
         newStage.setMaximized(true);
 
         newStage.show();
