@@ -150,25 +150,19 @@ public class AddApplicationController {
 
     @FXML
     private void handleAddClient(ActionEvent event) throws IOException {
-        // Логика для добавления нового клиента
         sceneManager.openScene(FxmlView.CLIENT_APPLICATION_ADD);
-        // После добавления обновляем данные в ComboBox
         loadComboBoxData();
     }
 
     @FXML
     private void handleAddRepair(ActionEvent event) throws IOException {
-        // Логика для добавления нового ремонта
         sceneManager.openScene(FxmlView.REPAIR_APPLICATION_ADD);
-        // После добавления обновляем данные в ComboBox
         loadComboBoxData();
     }
 
     @FXML
     private void handleAddType(ActionEvent event) throws IOException {
-        // Логика для добавления нового типа
         sceneManager.openScene(FxmlView.TYPE_APPLICATION_ADD);
-        // После добавления обновляем данные в ComboBox
         loadComboBoxData();
     }
 }

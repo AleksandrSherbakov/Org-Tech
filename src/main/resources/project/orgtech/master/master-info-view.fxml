@@ -8,69 +8,69 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.master.MasterInfoController">
     <children>
-        <AnchorPane layoutY="95.0" prefHeight="985.0" prefWidth="1920.0" style="-fx-background-color: #fafafa;">
+        <AnchorPane layoutY="95.0" prefHeight="899.0" prefWidth="1920.0" style="-fx-background-color: #fafafa;">
             <children>
-                <Label layoutX="500.0" layoutY="100.0" text="Логин:" textFill="#000000">
+                <Label layoutX="500.0" layoutY="55.0" text="Логин:" textFill="#000000">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="firstNameField" editable="false" layoutX="500.0" layoutY="150.0" prefHeight="60.0" prefWidth="900.0">
+                <TextField fx:id="firstNameField" editable="false" layoutX="500.0" layoutY="100.0" prefHeight="60.0" prefWidth="900.0">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </TextField>
-                <Label layoutX="500.0" layoutY="250.0" text="Фамилия:" textFill="#000000">
+                <Label layoutX="500.0" layoutY="182.0" text="Фамилия:" textFill="#000000">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="firstNameLabel" editable="false" layoutX="500.0" layoutY="300.0" prefHeight="60.0" prefWidth="900.0">
+                <TextField fx:id="firstNameLabel" editable="false" layoutX="500.0" layoutY="230.0" prefHeight="60.0" prefWidth="900.0">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </TextField>
-                <Label layoutX="500.0" layoutY="400.0" text="Имя:" textFill="#000000">
+                <Label layoutX="498.0" layoutY="306.0" text="Имя:" textFill="#000000">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="middleNameLabel" editable="false" layoutX="500.0" layoutY="450.0" prefHeight="60.0" prefWidth="900.0">
+                <TextField fx:id="middleNameLabel" editable="false" layoutX="498.0" layoutY="350.0" prefHeight="60.0" prefWidth="900.0">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </TextField>
-                <Label layoutX="500.0" layoutY="550.0" text="Отчество:" textFill="#000000">
+                <Label layoutX="499.0" layoutY="433.0" text="Отчество:" textFill="#000000">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="lastNameLabel" editable="false" layoutX="500.0" layoutY="600.0" prefHeight="60.0" prefWidth="900.0">
+                <TextField fx:id="lastNameLabel" editable="false" layoutX="500.0" layoutY="480.0" prefHeight="60.0" prefWidth="900.0">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </TextField>
-                <Label layoutX="500.0" layoutY="700.0" text="Пол:" textFill="#000000">
+                <Label layoutX="498.0" layoutY="560.0" text="Пол:" textFill="#000000">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </Label>
-                <TextField fx:id="genderLabel" editable="false" layoutX="500.0" layoutY="750.0" prefHeight="60.0" prefWidth="900.0">
+                <TextField fx:id="genderLabel" editable="false" layoutX="498.0" layoutY="615.0" prefHeight="60.0" prefWidth="900.0">
                     <font>
                         <Font size="32.0" />
                     </font>
                 </TextField>
-                <Button fx:id="editButton" layoutX="431.0" layoutY="850.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #F39c53;" text="Редактировать">
+                <Button fx:id="editButton" layoutX="421.0" layoutY="734.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #F39c53;" text="Редактировать">
                     <font>
                         <Font name="Comic Sans MS" size="32.0" />
                     </font>
                 </Button>
-                <Button fx:id="backButton" layoutX="817.0" layoutY="850.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #F39c53;" text="Назад">
+                <Button fx:id="backButton" layoutX="823.0" layoutY="734.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #F39c53;" text="Назад">
                     <font>
                         <Font name="Comic Sans MS" size="32.0" />
                     </font>
                 </Button>
-                <Button fx:id="exitButton" layoutX="1198.0" layoutY="850.0" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #F39c53;" text="Выход">
+                <Button fx:id="exitButton" layoutX="1196.0" layoutY="734.0" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #F39c53;" text="Выход">
                     <font>
                         <Font name="Comic Sans MS" size="32.0" />
                     </font>

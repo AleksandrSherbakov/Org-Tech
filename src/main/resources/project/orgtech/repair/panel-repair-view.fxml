@@ -44,14 +44,9 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="710.0" layoutY="23.0" prefHeight="50.0" prefWidth="700.0" text="Ремонт орг техники" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="810.0" layoutY="41.0" prefHeight="63.0" prefWidth="428.0" text="Ремонт орг техники" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Comic Sans MS" size="44.0" />
-         </font>
-      </Label>
-      <Label layoutX="760.0" layoutY="1014.0" prefHeight="30.0" prefWidth="400.0" text="Дипломная работа" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Comic Sans MS" size="24.0" />
          </font>
       </Label>
    </children>

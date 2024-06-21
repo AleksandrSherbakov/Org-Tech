@@ -64,9 +64,9 @@
             <Font name="Comic Sans MS" size="44.0" />
          </font>
       </Label>
-      <Label layoutX="834.0" layoutY="1027.0" prefHeight="30.0" prefWidth="400.0" text="Дипломная работа" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="879.0" layoutY="27.0" prefHeight="84.0" prefWidth="306.0" text="Регистрация" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="Comic Sans MS" size="24.0" />
+            <Font name="Comic Sans MS" size="44.0" />
          </font>
       </Label>
    </children>

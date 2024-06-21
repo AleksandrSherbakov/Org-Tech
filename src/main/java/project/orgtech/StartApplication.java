@@ -2,8 +2,10 @@ package project.orgtech;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import lombok.Getter;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -27,6 +29,14 @@ public class StartApplication extends Application {
         Parent root = loader.load();
         primaryStage.setTitle("Вход");
         primaryStage.setScene(new Scene(root));
+        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+
+        // Устанавливаем размеры окна на размеры экрана
+        primaryStage.setX(primaryScreenBounds.getMinX());
+        primaryStage.setY(primaryScreenBounds.getMinY());
+        primaryStage.setWidth(primaryScreenBounds.getWidth());
+        primaryStage.setHeight(primaryScreenBounds.getHeight());
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 

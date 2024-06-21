@@ -56,7 +56,7 @@ public class PanelClientController {
 
     @FXML
     private void handleReportsButton(ActionEvent event) throws IOException {
-        //sceneManager.openScene(ReportsButton, FxmlView.REPORTS);
+        sceneManager.getReports(ReportsButton);
     }
 
     @FXML

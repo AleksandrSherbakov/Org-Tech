@@ -7,84 +7,96 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.application.EditApplicationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.application.EditApplicationController">
    <children>
-      <AnchorPane layoutY="100.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
+      <AnchorPane layoutY="143.0" prefHeight="850.0" prefWidth="1920.0" style="-fx-background-color: #fafafa;">
          <children>
-            <Label layoutX="160.0" layoutY="45.0" text="Имя">
+            <Label layoutX="562.0" layoutY="45.0" text="Имя" textFill="#000000">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </Label>
-            <TextField fx:id="nameField" layoutX="290.0" layoutY="45.0" prefHeight="40.0" prefWidth="215.0" promptText="Имя">
+            <TextField fx:id="nameField" layoutX="841.0" layoutY="45.0" prefHeight="50.0" prefWidth="500.0" promptText="Имя">
                <font>
-                  <Font size="18.0" />
+                  <Font size="24.0" />
                </font>
             </TextField>
-            <Label layoutX="160.0" layoutY="95.0" text="Цена">
+            <Label layoutX="562.0" layoutY="125.0" text="Цена" textFill="#000000">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </Label>
-            <TextField fx:id="priceField" layoutX="290.0" layoutY="95.0" prefHeight="40.0" prefWidth="215.0" promptText="Цена">
+            <TextField fx:id="priceField" layoutX="841.0" layoutY="125.0" prefHeight="50.0" prefWidth="500.0" promptText="Цена">
                <font>
-                  <Font size="18.0" />
+                  <Font size="24.0" />
                </font>
             </TextField>
-            <Label layoutX="160.0" layoutY="145.0" text="Клиент">
+            <Label layoutX="562.0" layoutY="205.0" text="Клиент" textFill="#000000">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </Label>
-            <ComboBox fx:id="clientComboBox" layoutX="290.0" layoutY="145.0" prefHeight="40.0" prefWidth="215.0" promptText="Выберите клиента" />
-            <Button fx:id="addClientButton" layoutX="600.0" layoutY="145.0" onAction="#handleAddClient" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #F39c53;" text="Добавить">
+            <ComboBox fx:id="clientComboBox" layoutX="841.0" layoutY="205.0" prefHeight="50.0" prefWidth="500.0" promptText="Выберите клиента">
+
+            </ComboBox>
+            <Button fx:id="addClientButton" layoutX="1362.0" layoutY="205.0" onAction="#handleAddClient" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F39c53;" text="Добавить">
                <font>
-                  <Font size="16.0" />
+                  <Font size="24.0" />
                </font>
             </Button>
-            <Label layoutX="160.0" layoutY="195.0" text="Ремонт">
+            <Label layoutX="562.0" layoutY="285.0" text="Ремонт" textFill="#000000">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </Label>
-            <ComboBox fx:id="repairComboBox" layoutX="290.0" layoutY="195.0" prefHeight="40.0" prefWidth="215.0" promptText="Выберите ремонт" />
-            <Button fx:id="addRepairButton" layoutX="600.0" layoutY="195.0" onAction="#handleAddRepair" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #F39c53;" text="Добавить">
+            <ComboBox fx:id="repairComboBox" layoutX="841.0" layoutY="285.0" prefHeight="50.0" prefWidth="500.0" promptText="Выберите ремонт">
+
+            </ComboBox>
+            <Button fx:id="addRepairButton" layoutX="1362.0" layoutY="285.0" onAction="#handleAddRepair" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F39c53;" text="Добавить">
                <font>
-                  <Font size="16.0" />
+                  <Font size="24.0" />
                </font>
             </Button>
-            <Label layoutX="160.0" layoutY="245.0" text="Тип">
+            <Label layoutX="562.0" layoutY="365.0" text="Тип" textFill="#000000">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </Label>
-            <ComboBox fx:id="typeComboBox" layoutX="290.0" layoutY="245.0" prefHeight="40.0" prefWidth="215.0" promptText="Выберите тип" />
-            <Button fx:id="addTypeButton" layoutX="600.0" layoutY="245.0" onAction="#handleAddType" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #F39c53;" text="Добавить">
+            <ComboBox fx:id="typeComboBox" layoutX="841.0" layoutY="365.0" prefHeight="50.0" prefWidth="500.0" promptText="Выберите тип">
+
+            </ComboBox>
+            <Button fx:id="addTypeButton" layoutX="1362.0" layoutY="365.0" onAction="#handleAddType" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F39c53;" text="Добавить">
                <font>
-                  <Font size="16.0" />
+                  <Font size="24.0" />
                </font>
             </Button>
-            <Label layoutX="160.0" layoutY="295.0" text="Статус">
+            <Label layoutX="562.0" layoutY="445.0" text="Статус" textFill="#000000">
                <font>
-                  <Font size="18.0" />
+                  <Font size="32.0" />
                </font>
             </Label>
-            <ComboBox fx:id="statusComboBox" layoutX="290.0" layoutY="295.0" prefHeight="40.0" prefWidth="215.0" promptText="Выберите статус" />
-            <Button fx:id="saveButton" layoutX="259.0" layoutY="365.0" onAction="#handleSave" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #F39c53;" text="Сохранить">
+            <ComboBox fx:id="statusComboBox" layoutX="841.0" layoutY="445.0" prefHeight="50.0" prefWidth="500.0" promptText="Выберите статус">
+            </ComboBox>
+            <Button fx:id="saveButton" layoutX="841.0" layoutY="565.0" onAction="#handleSave" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F39c53;" text="Сохранить">
                <font>
-                  <Font size="16.0" />
+                  <Font size="24.0" />
                </font>
             </Button>
-            <Button fx:id="backButton" layoutX="418.0" layoutY="365.0" onAction="#handleBackButton" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #F39c53;" text="Назад">
+            <Button fx:id="backButton" layoutX="1191.0" layoutY="565.0" onAction="#handleBackButton" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F39c53;" text="Назад">
                <font>
-                  <Font size="16.0" />
+                  <Font size="24.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <Label layoutX="179.0" layoutY="14.0" prefHeight="67.0" prefWidth="442.0" text="Создание заявки" textFill="WHITE">
+      <Label layoutX="735.0" layoutY="27.0" prefHeight="84.0" prefWidth="1030.0" text="Создание заявки" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="Comic Sans MS" size="48.0" />
+            <Font name="Comic Sans MS" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="824.0" layoutY="1017.0" prefHeight="30.0" prefWidth="400.0" text="Дипломная работа" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
          </font>
       </Label>
    </children>

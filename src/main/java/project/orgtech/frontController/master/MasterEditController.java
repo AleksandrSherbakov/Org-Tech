@@ -58,15 +58,18 @@ public class MasterEditController implements DataReceiver<Master> {
             master.setFirstName(firstNameField.getText());
             master.setMiddleName(middleNameField.getText());
             master.setLastName(lastNameField.getText());
-            // Assuming you have a way to convert the gender name back to a Gender object
-            // e.g., using a GenderService or a similar mechanism
-            master.setGender(genderService.getById(Long.parseLong(genderComboBox.getId())+1));
+            // Get the selected gender from the ComboBox
+            Gender selectedGender = genderComboBox.getValue();
+            if (selectedGender != null) {
+                master.setGender(genderService.getById(selectedGender.getId()));
+            }
             masterService.update(master);
             AuthManager.setMaster(master); // Update the AuthManager with the updated master
             sceneManager.showAlert("Успех", "Изменения сохранены успешно");
             sceneManager.openScene(saveButton, FxmlView.MASTER_INFO); // Go back to the info view
         }
     }
+
 
     @FXML
     private void handleBackButton(ActionEvent event) throws IOException {
