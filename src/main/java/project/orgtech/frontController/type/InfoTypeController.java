@@ -1,6 +1,8 @@
 package project.orgtech.frontController.type;
 
 import javafx.event.ActionEvent;
+import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import project.orgtech.frontController.utils.DataReceiver;
@@ -60,10 +62,15 @@ public class InfoTypeController implements DataReceiver<Type> {
     }
     @FXML
     private void handleDeleteButton(ActionEvent event) throws IOException {
-        if (type != null) {
-            typeService.delete(type.getId());
+        try{
+            if (type != null) {
+                typeService.delete(type.getId());
+            }
+            sceneManager.openScene(DeleteButton, FxmlView.TYPE_PANEL);
         }
-        sceneManager.openScene(DeleteButton, FxmlView.TYPE_PANEL);
+        catch (Exception e){
+            sceneManager.showAlert("Ошибка", "Что то пошло не так");
+        }
     }
 
     private void loadTypeData() {

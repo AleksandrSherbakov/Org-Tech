@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import project.orgtech.frontController.utils.DataReceiver;
@@ -61,10 +63,17 @@ public class InfoClientController implements DataReceiver<Client> {
     }
     @FXML
     private void handleDeleteButton(ActionEvent event) throws IOException {
-        if (client != null) {
-            clientService.delete(client.getId());
+
+        try{
+            if (client != null) {
+                clientService.delete(client.getId());
+            }
+            sceneManager.openScene(DeleteButton, FxmlView.CLIENT_PANEL);
         }
-        sceneManager.openScene(DeleteButton, FxmlView.CLIENT_PANEL);
+        catch (Exception e){
+            sceneManager.showAlert("Ошибка", "Что то пошло не так");
+        }
+
     }
 
     private void loadClientData() {

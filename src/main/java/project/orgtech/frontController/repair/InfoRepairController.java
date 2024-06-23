@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import project.orgtech.frontController.utils.DataReceiver;
@@ -59,10 +61,16 @@ public class InfoRepairController implements DataReceiver<Repair> {
     }
     @FXML
     private void handleDeleteButton(ActionEvent event) throws IOException {
-        if (repair != null) {
-            repairService.delete(repair.getId());
+        try{
+            if (repair != null) {
+                repairService.delete(repair.getId());
+            }
+            sceneManager.openScene(DeleteButton, FxmlView.REPAIR_PANEL);
         }
-        sceneManager.openScene(DeleteButton, FxmlView.REPAIR_PANEL);
+        catch (Exception e){
+            sceneManager.showAlert("Ошибка", "Что то пошло не так");
+        }
+
     }
 
     private void loadRepairData() {

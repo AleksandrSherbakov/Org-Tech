@@ -110,7 +110,7 @@ public class MainController {
                     Text statusText = new Text(application.getStatus().getName());
 
                     HBox.setHgrow(nameText, Priority.ALWAYS); // Push status text to the right
-                    nameText.setWrappingWidth(1000); // Adjust this width as needed
+                    nameText.setWrappingWidth(1300); // Adjust this width as needed
 
                     hBox.getChildren().addAll(nameText, statusText);
                     hBox.setAlignment(Pos.CENTER_LEFT); // Align children to the left

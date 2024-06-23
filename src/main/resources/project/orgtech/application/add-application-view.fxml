@@ -11,12 +11,12 @@
    <children>
       <AnchorPane layoutY="143.0" prefHeight="850.0" prefWidth="1920.0" style="-fx-background-color: #fafafa;">
          <children>
-            <Label layoutX="400.0" layoutY="45.0" text="Имя">
+            <Label layoutX="399.0" layoutY="56.0" prefHeight="47.0" prefWidth="154.0" text="Название">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <TextField fx:id="nameField" layoutX="600.0" layoutY="45.0" prefHeight="60.0" prefWidth="800.0" promptText="Имя">
+            <TextField fx:id="nameField" layoutX="600.0" layoutY="45.0" prefHeight="60.0" prefWidth="800.0" promptText="Название">
                <font>
                   <Font size="32.0" />
                </font>
@@ -70,12 +70,12 @@
                </font>
             </Label>
             <ComboBox fx:id="statusComboBox" layoutX="600.0" layoutY="545.0" prefHeight="60.0" prefWidth="800.0" promptText="Выберите статус" />
-            <Button fx:id="saveButton" layoutX="800.0" layoutY="700.0" onAction="#handleSave" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Сохранить">
+            <Button fx:id="saveButton" layoutX="760.0" layoutY="700.0" onAction="#handleSave" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Сохранить">
                <font>
                   <Font size="32.0" />
                </font>
             </Button>
-            <Button fx:id="backButton" layoutX="1050.0" layoutY="700.0" onAction="#handleBackButton" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Назад">
+            <Button fx:id="backButton" layoutX="1000.0" layoutY="700.0" onAction="#handleBackButton" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Назад">
                <font>
                   <Font size="32.0" />
                </font>

@@ -1,14 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.control.TextField?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.orgtech.frontController.application.InfoApplicationController">
    <children>
       <AnchorPane layoutY="143.0" prefHeight="850.0" prefWidth="1920.0" style="-fx-background-color: #fafafa;">
          <children>
-            <Label layoutX="562.0" layoutY="45.0" text="Имя" textFill="#000000">
+            <Label layoutX="562.0" layoutY="45.0" text="Название" textFill="#000000">
                <font>
                   <Font size="32.0" />
                </font>
@@ -57,17 +59,17 @@
             </Label>
             <TextField fx:id="dateField" editable="false" layoutX="841.0" layoutY="525.0" prefHeight="50.0" prefWidth="500.0" />
 
-            <Button fx:id="editButton" layoutX="841.0" layoutY="625.0" onAction="#handleEditButton" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Редактировать">
+            <Button fx:id="editButton" layoutX="555.0" layoutY="632.0" onAction="#handleEditButton" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Редактировать">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button fx:id="deleteButton" layoutX="1061.0" layoutY="625.0" onAction="#handleDeleteButton" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Удалить">
+            <Button fx:id="deleteButton" layoutX="860.0" layoutY="632.0" onAction="#handleDeleteButton" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Удалить">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button fx:id="backButton" layoutX="1281.0" layoutY="625.0" onAction="#handleBackButton" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Назад">
+            <Button fx:id="backButton" layoutX="1141.0" layoutY="632.0" onAction="#handleBackButton" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #F39c53;" text="Назад">
                <font>
                   <Font size="24.0" />
                </font>

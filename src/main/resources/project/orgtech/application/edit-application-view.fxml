@@ -77,12 +77,12 @@
             </Label>
             <ComboBox fx:id="statusComboBox" layoutX="841.0" layoutY="445.0" prefHeight="50.0" prefWidth="500.0" promptText="Выберите статус">
             </ComboBox>
-            <Button fx:id="saveButton" layoutX="841.0" layoutY="565.0" onAction="#handleSave" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F39c53;" text="Сохранить">
+            <Button fx:id="saveButton" layoutX="706.0" layoutY="565.0" onAction="#handleSave" prefHeight="51.0" prefWidth="199.0" style="-fx-background-color: #F39c53;" text="Сохранить">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button fx:id="backButton" layoutX="1191.0" layoutY="565.0" onAction="#handleBackButton" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F39c53;" text="Назад">
+            <Button fx:id="backButton" layoutX="1012.0" layoutY="565.0" onAction="#handleBackButton" prefHeight="51.0" prefWidth="199.0" style="-fx-background-color: #F39c53;" text="Назад">
                <font>
                   <Font size="24.0" />
                </font>
