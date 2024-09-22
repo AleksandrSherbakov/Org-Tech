@@ -17,6 +17,7 @@ import java.io.IOException;
 @Controller
 public class EditRepairController implements DataReceiver<Repair> {
     private Repair repair;
+
     @Override
     public void setData(Repair repair) {
         this.repair = repair;
@@ -45,10 +46,9 @@ public class EditRepairController implements DataReceiver<Repair> {
             sceneManager.showAlert("Ошибка", "Ремонт не найден");
             return;
         }
-        if(nameField==null||descriptionField==null){
-            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
-        }
-        else {
+        if (nameField == null || descriptionField == null) {
+            sceneManager.showAlert("Ошибка", "поля должны быть заполнены");
+        } else {
             String newName = nameField.getText();
             String newDescription = descriptionField.getText();
 

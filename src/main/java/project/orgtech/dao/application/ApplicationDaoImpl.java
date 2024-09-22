@@ -10,19 +10,20 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
-public class ApplicationDaoImpl implements ApplicationDao{
+public class ApplicationDaoImpl implements ApplicationDao {
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
     public Application getById(Long id) {
-        return entityManager.find(Application.class, id);    }
+        return entityManager.find(Application.class, id);
+    }
 
     @Override
     @Transactional
     public void add(Application application) {
-        entityManager.persist(application);
+         entityManager.persist(application);
     }
 
     @Override

@@ -35,10 +35,9 @@ public class AddRepairApplicationController {
     @FXML
     private void handleSave(ActionEvent event) throws IOException {
 
-        if(nameField==null||descriptionField==null){
-            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
-        }
-        else {
+        if (nameField == null || descriptionField == null) {
+            sceneManager.showAlert("Ошибка", "поля должны быть заполнены");
+        } else {
             Repair repair = new Repair();
             repair.setName(nameField.getText());
             repair.setDescription(descriptionField.getText());

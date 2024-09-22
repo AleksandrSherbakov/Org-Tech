@@ -34,10 +34,9 @@ public class AddTypeApplicationController {
 
     @FXML
     private void handleSave(ActionEvent event) throws IOException {
-        if(nameField==null||descriptionField==null){
-            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
-        }
-        else {
+        if (nameField == null || descriptionField == null) {
+            sceneManager.showAlert("Ошибка", "поля должны быть заполнены");
+        } else {
             Type type = new Type();
             type.setName(nameField.getText());
             type.setDescription(descriptionField.getText());

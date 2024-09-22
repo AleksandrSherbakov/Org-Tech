@@ -35,10 +35,9 @@ public class AddClientController {
 
     @FXML
     private void handleSave(ActionEvent event) throws IOException {
-        if(nameField==null||descriptionField==null){
-            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
-        }
-        else{
+        if (nameField == null || descriptionField == null) {
+            sceneManager.showAlert("Ошибка", "поля должны быть заполнены");
+        } else {
             Client client = new Client();
             client.setBio(nameField.getText());
             client.setPhone(descriptionField.getText());

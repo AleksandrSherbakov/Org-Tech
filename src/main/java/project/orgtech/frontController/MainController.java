@@ -69,6 +69,7 @@ public class MainController {
     private void handleCreateButton(ActionEvent event) throws IOException {
         sceneManager.openScene(CreateButton, FxmlView.APPLICATION_ADD);
     }
+
     @FXML
     private void handleMasterArea(ActionEvent event) throws IOException {
         sceneManager.openScene(CreateButton, FxmlView.MASTER_INFO);
@@ -81,9 +82,9 @@ public class MainController {
 
         // Sort applications: In Progress first, then Completed
         applications.sort((a1, a2) -> {
-            if (1L==a1.getStatus().getId() && 2L==a2.getStatus().getId()) {
+            if (1L == a1.getStatus().getId() && 2L == a2.getStatus().getId()) {
                 return -1;
-            } else if (2L==a2.getStatus().getId() && 1L==a1.getStatus().getId()) {
+            } else if (2L == a2.getStatus().getId() && 1L == a1.getStatus().getId()) {
                 return 1;
             } else {
                 return 0;
@@ -124,7 +125,7 @@ public class MainController {
         ApplicationListView.setOnMouseClicked(this::handleListClick);
     }
 
-        // Set ListView click handler
+    // Set ListView click handler
 
     private List<Application> loadDataFromDatabase() {
         return applicationService.getAll();

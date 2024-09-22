@@ -76,10 +76,10 @@ public class AddApplicationController {
 
     private void loadComboBoxData() {
         // Create a Timeline to add a delay before executing the data loading
-            clientComboBox.setItems(FXCollections.observableArrayList(clientService.getAll()));
-            repairComboBox.setItems(FXCollections.observableArrayList(repairService.getAll()));
-            typeComboBox.setItems(FXCollections.observableArrayList(typeService.getAll()));
-            statusComboBox.setItems(FXCollections.observableArrayList(statusService.getAll()));
+        clientComboBox.setItems(FXCollections.observableArrayList(clientService.getAll()));
+        repairComboBox.setItems(FXCollections.observableArrayList(repairService.getAll()));
+        typeComboBox.setItems(FXCollections.observableArrayList(typeService.getAll()));
+        statusComboBox.setItems(FXCollections.observableArrayList(statusService.getAll()));
     }
 
     @FXML

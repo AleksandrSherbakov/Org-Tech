@@ -18,6 +18,7 @@ import java.io.IOException;
 @Controller
 public class EditClientController implements DataReceiver<Client> {
     private Client client;
+
     @Override
     public void setData(Client client) {
         this.client = client;
@@ -46,10 +47,9 @@ public class EditClientController implements DataReceiver<Client> {
             sceneManager.showAlert("Ошибка", "Клиент не найден");
             return;
         }
-        if(nameField==null||descriptionField==null){
-            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
-        }
-        else {
+        if (nameField == null || descriptionField == null) {
+            sceneManager.showAlert("Ошибка", "поля должны быть заполнены");
+        } else {
             String newName = nameField.getText();
             String newDescription = descriptionField.getText();
 

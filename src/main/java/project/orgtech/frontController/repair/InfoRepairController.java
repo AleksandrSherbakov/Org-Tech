@@ -36,7 +36,7 @@ public class InfoRepairController implements DataReceiver<Repair> {
     private Button EditButton;
 
     @FXML
-    private TextField nameField ;
+    private TextField nameField;
 
     @FXML
     private TextField descriptionField;
@@ -50,6 +50,7 @@ public class InfoRepairController implements DataReceiver<Repair> {
     @FXML
     private void initialize() {
     }
+
     @FXML
     private void handleEditButton(ActionEvent event) throws IOException {
         sceneManager.openScene(EditButton, FxmlView.REPAIR_EDIT, repair);
@@ -59,15 +60,15 @@ public class InfoRepairController implements DataReceiver<Repair> {
     private void handleBackButton(ActionEvent event) throws IOException {
         sceneManager.openScene(BackButton, FxmlView.REPAIR_PANEL);
     }
+
     @FXML
     private void handleDeleteButton(ActionEvent event) throws IOException {
-        try{
+        try {
             if (repair != null) {
                 repairService.delete(repair.getId());
             }
             sceneManager.openScene(DeleteButton, FxmlView.REPAIR_PANEL);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             sceneManager.showAlert("Ошибка", "Что то пошло не так");
         }
 

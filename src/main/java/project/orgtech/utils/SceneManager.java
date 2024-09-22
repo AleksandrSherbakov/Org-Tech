@@ -98,6 +98,7 @@ public class SceneManager {
         newStage.setMaximized(true);
         newStage.show();
     }
+
     public void closeScene(Button button) throws IOException {
         Stage currentStage = (Stage) button.getScene().getWindow();
         if (currentStage != null) {
@@ -112,6 +113,7 @@ public class SceneManager {
         alert.setContentText(content);
         alert.showAndWait();
     }
+
     public void getReports(Button button) throws IOException {
         Stage currentStage = (Stage) button.getScene().getWindow();
         FileChooser fileChooser = new FileChooser();

@@ -43,11 +43,10 @@ public class LoginController {
             AuthManager.setMaster(master);
             sceneManager.openScene(loginButton, FxmlView.MAIN);
         } else {
-            if(master != null){
-                sceneManager.showAlert("Ошибка","Пароль неверный");
-            }
-            else{
-                sceneManager.showAlert("Ошибка","Логин неверный");
+            if (master != null) {
+                sceneManager.showAlert("Ошибка", "Пароль неверный");
+            } else {
+                sceneManager.showAlert("Ошибка", "Логин неверный");
             }
 
         }

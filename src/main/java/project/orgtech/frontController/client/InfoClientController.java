@@ -38,7 +38,7 @@ public class InfoClientController implements DataReceiver<Client> {
     private Button EditButton;
 
     @FXML
-    private TextField nameField ;
+    private TextField nameField;
 
     @FXML
     private TextField descriptionField;
@@ -52,6 +52,7 @@ public class InfoClientController implements DataReceiver<Client> {
     @FXML
     private void initialize() {
     }
+
     @FXML
     private void handleEditButton(ActionEvent event) throws IOException {
         sceneManager.openScene(EditButton, FxmlView.CLIENT_EDIT, client);
@@ -61,16 +62,16 @@ public class InfoClientController implements DataReceiver<Client> {
     private void handleBackButton(ActionEvent event) throws IOException {
         sceneManager.openScene(BackButton, FxmlView.CLIENT_PANEL);
     }
+
     @FXML
     private void handleDeleteButton(ActionEvent event) throws IOException {
 
-        try{
+        try {
             if (client != null) {
                 clientService.delete(client.getId());
             }
             sceneManager.openScene(DeleteButton, FxmlView.CLIENT_PANEL);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             sceneManager.showAlert("Ошибка", "Что то пошло не так");
         }
 

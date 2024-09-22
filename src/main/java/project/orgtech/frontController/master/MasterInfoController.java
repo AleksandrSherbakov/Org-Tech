@@ -18,11 +18,6 @@ import java.io.IOException;
 @Controller
 public class MasterInfoController implements DataReceiver<Master> {
 
-
-    //public TextField loginField;
-    //public TextField firstNameField;
-    //public TextField middleNameField;
-    //public TextField lastNameField;
     public ComboBox genderComboBox;
     public Button saveButton;
     @Autowired
@@ -87,5 +82,5 @@ public class MasterInfoController implements DataReceiver<Master> {
 
     public void handleSaveButton(ActionEvent actionEvent) {
     }
-    
+
 }

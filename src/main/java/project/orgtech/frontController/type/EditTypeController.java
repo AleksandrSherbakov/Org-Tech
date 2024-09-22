@@ -46,10 +46,9 @@ public class EditTypeController implements DataReceiver<Type> {
             sceneManager.showAlert("Ошибка", "Тип не найден");
             return;
         }
-        if(nameField==null||descriptionField==null){
-            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
-        }
-        else {
+        if (nameField == null || descriptionField == null) {
+            sceneManager.showAlert("Ошибка", "поля должны быть заполнены");
+        } else {
             String newName = nameField.getText();
             String newDescription = descriptionField.getText();
 

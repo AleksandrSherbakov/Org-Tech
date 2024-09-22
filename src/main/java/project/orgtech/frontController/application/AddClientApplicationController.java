@@ -33,21 +33,20 @@ public class AddClientApplicationController {
 
     @FXML
     private void handleSave(ActionEvent event) throws IOException {
-        if(nameField==null||descriptionField==null){
-            sceneManager.showAlert("Ошибка","поля должны быть заполнены");
-        }
-        else{
+        if (nameField == null || descriptionField == null) {
+            sceneManager.showAlert("Ошибка", "поля должны быть заполнены");
+        } else {
             Client client = new Client();
             client.setBio(nameField.getText());
             client.setPhone(descriptionField.getText());
-        // Вызываем сервис для сохранения изменений
-        clientService.add(client);
+            // Вызываем сервис для сохранения изменений
+            clientService.add(client);
 
-        // Показываем сообщение об успешном сохранении
-        sceneManager.showAlert("Успешно", "Клиент создан");
-        client = null;
-        //sceneManager.openScene(SaveButton, FxmlView.APPLICATION_ADD);
-        sceneManager.closeScene(SaveButton);
+            // Показываем сообщение об успешном сохранении
+            sceneManager.showAlert("Успешно", "Клиент создан");
+            client = null;
+            //sceneManager.openScene(SaveButton, FxmlView.APPLICATION_ADD);
+            sceneManager.closeScene(SaveButton);
         }
 
     }
